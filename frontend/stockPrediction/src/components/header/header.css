@@ -1,14 +1,15 @@
 body {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
 }
 
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px;
-    text-align: justify;
+header{
+    background: linear-gradient(to right,#1b058a,  #1a0391de,#2107a7,#3819d0);
+    position: absolute;
+    left: 0;
+    font-family: 'Ubuntu', sans-serif;
+    top: 0; 
+    margin-bottom: 20px;
 }
 
 .left {
@@ -19,6 +20,8 @@ header {
     float: right;
 }
 
-a{
-    margin-left: 20px;
+.a{
+    margin-left: 10px;
+    text-decoration: none;
+    font-size: 15px;
 }

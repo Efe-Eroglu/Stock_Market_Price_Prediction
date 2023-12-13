@@ -1,9 +1,14 @@
-import "./share.css"
+import "./share.css";
+import Header from "../../components/header/Header"
 
 const Share = () => {
   return (
-    <div>Share</div>
-  )
-}
+    <>
+      <Header/>
+      <h1 className="mt-10">Hisseler</h1>
 
-export default Share
+    </>
+  );
+};
+
+export default Share;

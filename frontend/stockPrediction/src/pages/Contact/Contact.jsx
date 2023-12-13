@@ -1,8 +1,13 @@
 import "./contact.css"
+import Header from "../../components/header/Header"
 
 const Contact = () => {
   return (
-    <div>Contact</div>
+    <>
+    <Header/>
+
+    <h1 className="mt-10">İletişim</h1>
+    </>
   )
 }
 

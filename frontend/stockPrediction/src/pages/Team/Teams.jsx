@@ -1,8 +1,13 @@
 import "./team.css"
+import Header from "../../components/header/Header"
 
 const Teams = () => {
   return (
-    <div>Teams</div>
+    <>
+    <Header/>
+    <h1 className="mt-10">Ekibimiz</h1>
+
+    </>
   )
 }
 
