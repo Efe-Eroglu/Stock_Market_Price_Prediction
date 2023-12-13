@@ -1,13 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans:wght@300;400;600;700&display=swap");
+
 body {
     margin: 0;
     padding: 0;
 }
 
 header{
-    background: linear-gradient(to right,#1b058a,  #1a0391de,#2107a7,#3819d0);
-    position: absolute;
+    background-image: linear-gradient(to right, rgba(22, 22, 117, 0.993),rgba(20, 20, 106, 0.873),rgba(16, 16, 90, 0.873), rgb(7, 7, 66));
+    position: fixed;
     left: 0;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: "Roboto", sans-serif;
     top: 0; 
     margin-bottom: 20px;
 }
@@ -20,8 +22,8 @@ header{
     float: right;
 }
 
-.a{
-    margin-left: 10px;
-    text-decoration: none;
+.linkler{
+    margin-left: 6px;
+    margin-right: 6px;
     font-size: 15px;
 }
