@@ -24,7 +24,7 @@ const Header = () => {
           <span className="linkler">İletişim</span>
           </Link>
           <Link to="/login" className="text-white flex items-center hover:text-white active:text-white focus:text-white">
-            <FaRegUser className="text-lg mr-2 ml-2" />
+            <FaRegUser className="text-lg mr-6 ml-2" />
           </Link>
         </div>
       </header>

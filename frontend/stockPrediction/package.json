@@ -11,10 +11,14 @@
   },
   "dependencies": {
     "antd": "^5.12.2",
+    "coffee-script": "^1.12.7",
+    "flowbite-react": "^0.7.2",
+    "gulp-header": "^2.0.9",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.12.0",
-    "react-router-dom": "^6.20.1"
+    "react-router-dom": "^6.20.1",
+    "sharp": "^0.33.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",

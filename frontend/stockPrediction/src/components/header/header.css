@@ -7,7 +7,7 @@ body {
 
 header{
     background-image: linear-gradient(to right, rgba(22, 22, 117, 0.993),rgba(20, 20, 106, 0.873),rgba(16, 16, 90, 0.873), rgb(7, 7, 66));
-    position: fixed;
+    position: absolute;
     left: 0;
     font-family: "Roboto", sans-serif;
     top: 0; 

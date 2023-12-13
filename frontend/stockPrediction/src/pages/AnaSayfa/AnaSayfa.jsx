@@ -1,3 +1,4 @@
+import Foot from "../../components/footer/Foot";
 import Header from "../../components/header/Header";
 import "./anaSayfa.css";
 
@@ -62,9 +63,9 @@ const AnaSayfa = () => {
             <li data-target="#customCarousel1" data-slide-to="2"></li>
           </ol>
         </div>
-      
       </section>
-     
+
+      
     </>
   );
 };
