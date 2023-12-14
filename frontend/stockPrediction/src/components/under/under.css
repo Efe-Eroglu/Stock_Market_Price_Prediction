@@ -1,0 +1,46 @@
+.under{
+    height: 20%;
+    display: flex;   
+    color: white;
+    background-color: #181876;
+}
+.sosyal{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+}
+.right-under{
+    margin: 0;
+    padding: 0;
+}
+
+.right-under,
+.left-under,
+.center-under{
+    width: 33% !important;
+}
+
+.baslik h1{
+    font-weight: bold !important;
+    font-size: 1.5rem !important;
+    padding-left: 3px;
+}
+
+.baslik{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 3%;
+}
+
+.under p{
+    line-height: 2;
+}
+
+.sosyal a:hover,
+.sosyal a:link,
+.sosyal a:active,
+.sosyal a:visited{
+    color: white;
+}

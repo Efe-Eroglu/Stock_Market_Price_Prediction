@@ -6,7 +6,10 @@ const Contact = () => {
     <>
     <Header/>
 
-    <h1 className="mt-10">İletişim</h1>
+    <div className="arka w-screen h-screen">
+      <img src="/teamImages/banner-bg.png" className="arka w-screen h-screen" id="arka" alt="" />
+    </div>
+
     </>
   )
 }

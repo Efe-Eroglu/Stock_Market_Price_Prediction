@@ -5,8 +5,17 @@ import { FaRegUser } from "react-icons/fa";
 const Header = () => {
   return (
     <>
-      <header className="header w-screen h-16 flex items-center justify-between pl-0 pt-0 ml-0 mb-10">
-        <div className="text-white ml-4 text-3xl">Stock Prediction</div>
+      <header className="header w-screen h-16 flex items-center justify-between pl-0 pt-0 mb-10">
+        
+        <div className="left-side">
+          <div className="hamburger-menu ml-7">
+            <div className="bar"></div>
+            <div className="bar"></div>
+            <div className="bar"></div>
+          </div>
+          <div className="text-white text-3xl" id="yazi">Stock Market Prediction</div>
+        </div>
+        
         <div className="flex space-x-4 mr-4">
           <Link to="/" className="text-white hover:text-white active:text-white focus:text-white" >
             <span className="linkler">Ana Sayfa</span>

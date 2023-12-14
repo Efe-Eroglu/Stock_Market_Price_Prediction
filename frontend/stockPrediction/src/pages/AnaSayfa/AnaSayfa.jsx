@@ -1,4 +1,3 @@
-import Foot from "../../components/footer/Foot";
 import Header from "../../components/header/Header";
 import "./anaSayfa.css";
 

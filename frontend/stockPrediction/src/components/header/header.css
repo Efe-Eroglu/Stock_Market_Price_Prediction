@@ -7,11 +7,12 @@ body {
 
 header{
     background-image: linear-gradient(to right, rgba(22, 22, 117, 0.993),rgba(20, 20, 106, 0.873),rgba(16, 16, 90, 0.873), rgb(7, 7, 66));
-    position: absolute;
+    position: fixed;
     left: 0;
     font-family: "Roboto", sans-serif;
     top: 0; 
     margin-bottom: 20px;
+    margin: 0;
 }
 
 .left {
@@ -26,4 +27,22 @@ header{
     margin-left: 6px;
     margin-right: 6px;
     font-size: 15px;
+}
+
+.hamburger-menu{
+    cursor: pointer;
+}
+
+.left-side{
+    display: contents;
+    width: 400px;
+}
+
+.bar{
+    border-radius: 10%;
+}
+
+#yazi{
+    position: absolute;
+    margin-left: 80px;
 }

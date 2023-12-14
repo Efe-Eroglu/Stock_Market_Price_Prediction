@@ -2,10 +2,22 @@ import { useState } from "react";
 import "./login.css";
 
 const Login = () => {   
-       
+      
+  const [className,setClassName] = useState(false);
+
+
+  const setSignUp = () => {
+    setClassName(false);
+  }
+  
+  const setSignIn = () => {
+    setClassName(true);
+  }
+
+
   return (
     <>
-      <div className="container">
+      <div className={`container ${className ? 'sign-up-mode' : ''}`}>
         <div className="forms-container">
           <div className="signin-signup">
             <form className="sign-in-form">
@@ -58,7 +70,7 @@ const Login = () => {
                 Sende aramıza katılmak istermisin. Kolay bir şekilde aramıza
                 katılıp hisseleri inceleyebilmek için hemen kayıt ol.
               </p>
-              <button className="btn transparent" id="sign-up-btn">
+              <button className="btn transparent" id="sign-up-btn" onClick={setSignIn}> {/* Buraya eklenecek*/}
                 Kayıt Ol
               </button>
             </div>
@@ -71,7 +83,7 @@ const Login = () => {
                 Eğer daha önceden kayıt olup aramıza katıldıysan hemen giriş
                 yapıp hesabına ulaşabilirsin.
               </p>
-              <button className="btn transparent" id="sign-in-btn">
+              <button className="" id="sign-in-btn" onClick={setSignUp}> {/* Buraya eklenecek*/}
                 Giriş Yap
               </button>
             </div>
@@ -85,3 +97,19 @@ const Login = () => {
 };
 
 export default Login;
+
+
+
+// const giris_btn = document.querySelector("#sign-in-btn");
+// const kayit_btn = document.querySelector("#sign-up-btn");
+
+// const container = document.querySelector(".container");
+
+// kayit_btn.addEventListener('click', () => {
+//     container.classList.add("sign-up-mode");
+// });
+// giris_btn.addEventListener('click', () => {
+//     container.classList.remove("sign-up-mode");
+// });
+
+

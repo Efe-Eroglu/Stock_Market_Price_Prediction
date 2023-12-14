@@ -230,8 +230,6 @@ form.sign-up-form{
     transform: translateX(800px);
 }
 
-/* ANIMATION sTYLING */
-
 .container.sign-up-mode:before{
     transform: translate(100%, -50%);
     right: 52%;
