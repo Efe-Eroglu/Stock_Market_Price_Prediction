@@ -147,6 +147,11 @@ form.sign-up-form{
     justify-content: center;
 }
 
+.social-text{
+    width: 50%;
+    text-align: center;
+}
+
 .social-icon{
     height: 46px;
     width: 46px;
@@ -375,13 +380,12 @@ form.sign-up-form{
     }
   }
   
-
-
-
-
-
-
-
-
-
-
+#sign-in-btn{
+    margin: 0;
+    border: 2px solid #fff;
+    width: 130px;
+    height: 41px;
+    font-weight: 600;
+    font-size: 0.8rem;
+    border-radius: 49px;
+}

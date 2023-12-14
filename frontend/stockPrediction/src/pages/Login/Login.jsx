@@ -55,9 +55,9 @@ const Login = () => {
                 <i className="bx bxs-lock-alt"></i>
                 <input type="password" placeholder="Parola" />
               </div>
-              <input type="submit" value="Kayıt Ol" className="btn solid" />
-              <p className="social-text">
-                Sosyal medya hesaplarını kullanarak kayıt ol
+              <input type="submit" value="Kayıt Ol" className="btn solid bg-blue-900 mt-3" />
+              <p className="social-text mt-2">
+                Henüz hesabın yoksa aramıza katılmak için hemen kayıt olabilirsin
               </p>
             </form>
           </div>
@@ -97,19 +97,3 @@ const Login = () => {
 };
 
 export default Login;
-
-
-
-// const giris_btn = document.querySelector("#sign-in-btn");
-// const kayit_btn = document.querySelector("#sign-up-btn");
-
-// const container = document.querySelector(".container");
-
-// kayit_btn.addEventListener('click', () => {
-//     container.classList.add("sign-up-mode");
-// });
-// giris_btn.addEventListener('click', () => {
-//     container.classList.remove("sign-up-mode");
-// });
-
-
