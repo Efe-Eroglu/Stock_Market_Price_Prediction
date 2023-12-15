@@ -21,7 +21,7 @@ const Teams = () => {
       </div>
 
       <div className="wrapper">
-        <div className="ust-icerik">
+        <div className="ust-icerik mb-20">
           <h3 className="mt-20 text-6xl text-white">Ekibimiz</h3>
           <div className="ekip mt-10">
             <div className="uye">
@@ -90,9 +90,6 @@ const Teams = () => {
               </div>
             </div>
           </div>
-        </div>
-        <div className="alt-icerik">
-          <Under />
         </div>
        
       </div>

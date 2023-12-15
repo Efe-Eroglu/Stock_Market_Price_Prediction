@@ -5,6 +5,10 @@
   z-index: -1;
 }
 
+.ust-icerik h3{
+  text-align: center;
+}
+
 .ekip {
   display: flex;
   justify-content: center;

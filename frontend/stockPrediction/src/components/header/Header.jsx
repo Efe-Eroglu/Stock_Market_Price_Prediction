@@ -23,15 +23,12 @@ const Header = () => {
           <Link to="/share" className="text-white hover:text-white active:text-white focus:text-white">
           <span className="linkler">Tablolar</span>
           </Link>
-          <Link to="/about" className="text-white hover:text-white active:text-white focus:text-white">
-          <span className="linkler">Hakkımızda</span>
-          </Link> 
           <Link to="/team" className="text-white hover:text-white active:text-white focus:text-white">
           <span className="linkler">Ekibimiz</span>
           </Link>
-          <Link to="/contact" className="text-white hover:text-white active:text-white focus:text-white">
-          <span className="linkler">İletişim</span>
-          </Link>
+          <Link to="/about" className="text-white hover:text-white active:text-white focus:text-white">
+          <span className="linkler">Hakkımızda</span>
+          </Link> 
           <Link to="/login" className="text-white flex items-center hover:text-white active:text-white focus:text-white">
             <FaRegUser className="text-lg mr-6 ml-2" />
           </Link>

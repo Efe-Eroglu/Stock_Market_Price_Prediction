@@ -3,9 +3,9 @@ import "./anaSayfa.css";
 
 const AnaSayfa = () => {
   return (
-    <>
+    <div className="p-0 m-0">
       <Header />
-
+ 
       <div className="block">
         <img src="mainPageImages/hero-bg.png" className="heroBg" alt="" />
       </div>
@@ -65,7 +65,7 @@ const AnaSayfa = () => {
       </section>
 
       
-    </>
+    </div>
   );
 };
 

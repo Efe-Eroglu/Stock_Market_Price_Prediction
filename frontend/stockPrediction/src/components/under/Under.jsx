@@ -12,7 +12,7 @@ const Under = () => {
   return (
     <>
     
-        <div className="under w-screen">
+        <div className="under w-full">
           <div className="left-under">
             <div className="baslik"><CiLocationOn  className="text-3xl"/><h1>Konum</h1></div>
             <p>Fırat Üniversitesi</p>
