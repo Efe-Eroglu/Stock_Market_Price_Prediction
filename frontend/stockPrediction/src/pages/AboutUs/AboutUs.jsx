@@ -1,14 +1,10 @@
 import "./aboutUs.css"
-import Header from "../../components/header/Header"
-import Under from "../../components/under/Under"
-
 const AboutUs = () => {
   return (
   <>
   <div className="kapsayici">
 
-  <Header/>
-    <div className="back">
+    <div className="back -z-50">
       <img src="/teamImages/banner-bg.png" className="w-screen h-screen" alt="" />
     </div>
 

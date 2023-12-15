@@ -1,10 +1,11 @@
 import "./share.css";
-import Header from "../../components/header/Header"
 
 const Share = () => {
   return (
     <>
-    <Header/>
+      <div className="">
+        
+      </div>
     </>
   );
 };

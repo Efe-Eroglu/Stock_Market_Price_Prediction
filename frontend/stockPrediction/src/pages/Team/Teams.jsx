@@ -1,25 +1,10 @@
 import "./team.css";
-import Header from "../../components/header/Header";
-import Under from "../../components/under/Under";
 
 const Teams = () => {
   return (
-    <>
-      <Header />
-
-      <div className="back w-screen h-screen">
-        <img
-          src="/teamImages/banner-bg.png"
-          className="w-screen h-screen"
-          alt=""
-        />
-        <img
-          src="/teamImages/banner-bg2.png"
-          className="w-screen h-screen"
-          alt=""
-        />
-      </div>
-
+    
+    <div className="ekip-icerik">
+      
       <div className="wrapper">
         <div className="ust-icerik mb-20">
           <h3 className="mt-20 text-6xl text-white">Ekibimiz</h3>
@@ -91,10 +76,23 @@ const Teams = () => {
             </div>
           </div>
         </div>
-       
+        
       </div>
       
-    </>
+
+      <div className="back w-screen h-screen -z-50">
+        <img
+          src="/teamImages/banner-bg.png"
+          className="w-screen h-screen"
+          alt=""
+        />
+        <img
+          src="/teamImages/banner-bg2.png"
+          className="w-screen h-screen"
+          alt=""
+        />
+      </div>
+    </div>
   );
 };
 

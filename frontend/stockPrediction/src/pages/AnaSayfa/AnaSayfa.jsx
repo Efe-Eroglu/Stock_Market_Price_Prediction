@@ -1,11 +1,11 @@
-import Header from "../../components/header/Header";
 import "./anaSayfa.css";
 
 const AnaSayfa = () => {
   return (
-    <div className="p-0 m-0">
-      <Header />
- 
+
+
+    <div className="sayfa p-0 m-0 ">
+      
       <div className="block">
         <img src="mainPageImages/hero-bg.png" className="heroBg" alt="" />
       </div>
@@ -70,3 +70,5 @@ const AnaSayfa = () => {
 };
 
 export default AnaSayfa;
+
+
