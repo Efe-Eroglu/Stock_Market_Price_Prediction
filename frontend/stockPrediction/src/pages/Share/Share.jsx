@@ -3,7 +3,7 @@ import "./share.css";
 const Share = () => {
   return (
     <>
-      <div className="">
+      <div>
         
       </div>
     </>

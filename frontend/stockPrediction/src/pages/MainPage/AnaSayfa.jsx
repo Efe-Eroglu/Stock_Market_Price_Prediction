@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./anaSayfa.css";
 
 const AnaSayfa = () => {
+  
   const slider_content = [
     {
       img_path: "/mainPageImages/slider1.png",
@@ -21,10 +22,10 @@ const AnaSayfa = () => {
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
+  
 
   const changeSlide = (index) => {
     setCurrentIndex(index);
-    console.log(index);
   };
 
   return (
