@@ -4,7 +4,7 @@ const AnaSayfa = () => {
   return (
 
 
-    <div className="sayfa p-0 m-0 ">
+    <div className="sayfa">
       
       <div className="block">
         <img src="mainPageImages/hero-bg.png" className="heroBg" alt="" />

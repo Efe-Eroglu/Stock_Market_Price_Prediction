@@ -2,11 +2,11 @@ import "./team.css";
 
 const Teams = () => {
   return (
-    
+
     <div className="ekip-icerik">
       
       <div className="wrapper">
-        <div className="ust-icerik mb-20">
+        <div className="ust-icerik ">
           <h3 className="mt-20 text-6xl text-white">Ekibimiz</h3>
           <div className="ekip mt-10">
             <div className="uye">

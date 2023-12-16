@@ -16,7 +16,7 @@ const Login = () => {
 
 
   return (
-    <>
+    <div className="login-page-content ">
       <div className={`container ${className ? 'sign-up-mode' : ''}`}>
         <div className="forms-container">
           <div className="signin-signup">
@@ -34,7 +34,6 @@ const Login = () => {
                 type="submit"
                 value="Giriş Yap"
                 className="btn solid bg-blue-900 mt-3"
-              
               />
               <p className="sub-text mt-5">
                 Daha önceden bir hesap oluştuduysan bilgilerini girerek sitemizi
@@ -70,7 +69,7 @@ const Login = () => {
                 Sende aramıza katılmak istermisin. Kolay bir şekilde aramıza
                 katılıp hisseleri inceleyebilmek için hemen kayıt ol.
               </p>
-              <button className="btn transparent" id="sign-up-btn" onClick={setSignIn}> {/* Buraya eklenecek*/}
+              <button className="btn transparent" id="sign-up-btn" onClick={setSignIn}>
                 Kayıt Ol
               </button>
             </div>
@@ -83,7 +82,7 @@ const Login = () => {
                 Eğer daha önceden kayıt olup aramıza katıldıysan hemen giriş
                 yapıp hesabına ulaşabilirsin.
               </p>
-              <button className="" id="sign-in-btn" onClick={setSignUp}> {/* Buraya eklenecek*/}
+              <button className="" id="sign-in-btn" onClick={setSignUp}> 
                 Giriş Yap
               </button>
             </div>
@@ -92,7 +91,7 @@ const Login = () => {
         </div>
       </div> 
 
-    </>
+    </div>
   );
 };
 

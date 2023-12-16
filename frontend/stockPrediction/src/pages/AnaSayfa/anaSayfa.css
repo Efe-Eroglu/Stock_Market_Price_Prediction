@@ -5,12 +5,15 @@
     margin: 0;
     box-sizing: border-box;
 }
-
+.sayfa{
+  width: 100%;
+  height: 100%;
+}
 body, html {
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 120vh;
+    height: 100%;
   }
 .heroBg{
     position: absolute;
@@ -27,7 +30,7 @@ body, html {
 .detail-box{
     color:white;
     position: absolute;
-    left: 0;
+    left: 10%;
     justify-content: left;
     text-align: left;
     top: 90%;
@@ -36,10 +39,10 @@ body, html {
 
 #resim {
     position: absolute;
-    width: 500px;
-    height: 310px;
+    width: 35%;
+    height: 150%;
     top: 70%;
-    right: 0;
+    right: 6%;
   }
   
   body {

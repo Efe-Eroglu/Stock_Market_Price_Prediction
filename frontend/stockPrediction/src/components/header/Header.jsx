@@ -4,7 +4,7 @@ import { FaRegUser } from "react-icons/fa";
 const Header = () => {
   return (
     <>
-       <header className="header w-screen h-16 flex items-center justify-between pl-0 pt-0">
+       <header className="header !w-full h-16 flex items-center justify-between pl-0 pt-0">
         
         <div className="left-side">
           <div className="hamburger-menu ml-7">
