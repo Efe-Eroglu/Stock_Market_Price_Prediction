@@ -1,17 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans:wght@300;400;600;700&display=swap");
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-.sayfa{
+.slider{
   width: 100%;
   height: 100%;
 }
 body, html {
-    margin: 0;
-    padding: 0;
     width: 100%;
     height: 100%;
   }
@@ -39,7 +32,7 @@ body, html {
 
 #resim {
     position: absolute;
-    width: 35%;
+    width: 33%;
     height: 150%;
     top: 70%;
     right: 6%;
@@ -197,6 +190,7 @@ body, html {
   .slider_section .detail-box p {
     color: #fefefe;
     font-size: 14px;
+    
   }
   
   .slider_section .detail-box .btn-box {
@@ -249,37 +243,37 @@ body, html {
   
   .slider_section .img-box img {
     width: 100%;    
-    -webkit-animation: upDown 5s infinite;
+    -webkit-animation: upDown 8s infinite;
             animation: upDown 5s infinite;
   }
   
   @-webkit-keyframes upDown {
     0% {
-      -webkit-transform: translateY(-45px);
-              transform: translateY(-45px);
+      -webkit-transform: translateY(-40px);
+              transform: translateY(-40px);
     }
     50% {
-      -webkit-transform: translateY(45px);
-              transform: translateY(45px);
+      -webkit-transform: translateY(40px);
+              transform: translateY(40px);
     }
     100% {
-      -webkit-transform: translateY(-45px);
-              transform: translateY(-45px);
+      -webkit-transform: translateY(-40px);
+              transform: translateY(-40px);
     }
   }
   
   @keyframes upDown {
     0% {
-      -webkit-transform: translateY(-45px);
-              transform: translateY(-45px);
+      -webkit-transform: translateY(-40px);
+              transform: translateY(-40px);
     }
     50% {
-      -webkit-transform: translateY(45px);
-              transform: translateY(45px);
+      -webkit-transform: translateY(40px);
+              transform: translateY(40px);
     }
     100% {
-      -webkit-transform: translateY(-45px);
-              transform: translateY(-45px);
+      -webkit-transform: translateY(-40px);
+              transform: translateY(-40px);
     }
   }
   
@@ -588,7 +582,6 @@ body, html {
     color: #00204a;
   }
   
-  /* client section end */
   .info_section {
     background-color: #00204a;
     color: #ffffff;
@@ -725,24 +718,6 @@ body, html {
   .info_section form button:hover {
     background-color: #007fa4;
   }
-  
-  /* footer section*/
-  .footer_section {
-    position: relative;
-    background-color: #ffffff;
-    text-align: center;
-  }
-  
-  .footer_section p {
-    color: #00204a;
-    padding: 25px 0;
-    margin: 0;
-  }
-  
-  .footer_section p a {
-    color: inherit;
-  }
-
   
   .slider-button {
     display: flex;

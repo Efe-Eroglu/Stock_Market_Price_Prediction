@@ -1,7 +1,7 @@
 import Under from "./components/under/Under";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Share from "./pages/Share/Share";
-import AnaSayfa from "./pages/AnaSayfa/AnaSayfa";
+import AnaSayfa from "./pages/MainPage/AnaSayfa";
 import AboutUs from "./pages/AboutUs/AboutUs";
 import Teams from "./pages/Team/Teams";
 import Login from "./pages/Login/Login";
