@@ -77,12 +77,10 @@ const Teams = () => {
               </div>
             </div>
           </div>
-        </div>
-        
+        </div>        
       </div>
-      
 
-      <div className="back w-screen h-screen -z-50">
+      <div className="back w-screen h-screen">
         <img
           src="/teamImages/banner-bg.png"
           className="w-screen h-screen"

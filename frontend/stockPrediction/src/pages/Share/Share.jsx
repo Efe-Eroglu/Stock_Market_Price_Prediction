@@ -3,8 +3,10 @@ import "./share.css";
 const Share = () => {
   return (
     <>
-      <div>
+      <div className="w-full h-full">
         
+
+        <div className="arkaplan"></div>
       </div>
     </>
   );
