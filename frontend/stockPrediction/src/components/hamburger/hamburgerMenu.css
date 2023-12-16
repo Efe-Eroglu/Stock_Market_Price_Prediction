@@ -19,6 +19,7 @@
   }
   
   .hidden {
+  
     display: none;
   }
   
@@ -41,6 +42,7 @@
     overflow-y: auto;
     max-height: 625px;
     scroll-behavior: smooth;
+    
     
   }
 

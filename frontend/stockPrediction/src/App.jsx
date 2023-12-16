@@ -9,9 +9,10 @@ import Header from "./components/header/Header";
 
 
 function App() {
+  const isLoginPage = window.location.pathname === '/login';
   return (
     <div className="h-screen relative"> {/*h-screen relative h-fit*/}    
-      <Header/>
+        {isLoginPage ? null : <Header />}
       <Router> 
           <Routes>
             <Route path="/" element={<AnaSayfa/>} />
@@ -21,7 +22,7 @@ function App() {
             <Route path="/login" element={<Login/>} />
           </Routes>
         </Router>
-      <Under/>
+        {isLoginPage ? null : <Under />}
     </div>
   );
 }
