@@ -2,8 +2,8 @@ import Under from "./components/under/Under";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Share from "./pages/Share/Share";
 import AnaSayfa from "./pages/MainPage/AnaSayfa";
-import AboutUs from "./pages/AboutUs/AboutUs";
 import Teams from "./pages/Team/Teams";
+import Model from "./pages/AI-Models/Model";
 import Login from "./pages/Login/Login";
 import Header from "./components/header/Header";
 
@@ -17,8 +17,8 @@ function App() {
           <Routes>
             <Route path="/" element={<AnaSayfa/>} />
             <Route path="/share" element={<Share/>} />
-            <Route path="/about" element={<AboutUs/>} />
             <Route path="/team" element={<Teams/>} />
+            <Route path="/ai-models" element={<Model/>} />
             <Route path="/login" element={<Login/>} />
           </Routes>
         </Router>

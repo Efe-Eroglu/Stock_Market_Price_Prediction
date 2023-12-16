@@ -1,0 +1,97 @@
+.models{
+    display: flex;
+    align-items: center;
+    background-color: rgba(15, 18, 77, 0.573);
+    color: white;
+    height: 91%;
+}
+
+.icerik{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.hisse-tablo{
+    position: absolute;
+    width: 45%;
+    left: 5%;
+    top: 30%;
+}
+
+.hisse-yazi{
+    position: absolute;
+    right: 1%;
+    top: 32%; 
+    max-width: 50%;
+    font-weight: 300;
+    line-height: 28px;
+    text-align: left;
+}
+
+#tablo{
+    border-radius: 25px;
+    height: 400px;
+    width: 600px;
+}
+
+.models h1{
+    position: absolute;
+    top: 15%;
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.table-button {
+    display: flex;
+    position: absolute;
+    left: 48%;
+    top: 45%;  
+    margin-top: 335px;
+
+  }
+
+  .table-button .carousel-indicators li {
+    margin-right: 5px;
+  }
+
+  .table-button .carousel-indicators li.active {
+    width: 20px;
+    height: 20px;
+    background-color: #ffffff;
+  }
+  
+  .table-button .carousel-indicators {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  
+  .table-button .carousel-indicators li {
+    background-color: #ffffff;
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    opacity: 1;
+  }
+  
+  .table-button .carousel-indicators li.active {
+    width: 20px;
+    height: 20px;
+    background-color: #00bbf0;
+  }
+  
+  .model-back{
+    background-image: url("/teamImages/banner-bg.png");
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }

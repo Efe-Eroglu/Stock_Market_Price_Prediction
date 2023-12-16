@@ -18,34 +18,22 @@ const Header = () => {
         
         </div>
 
-        <div className="flex space-x-4 mr-4">
-          <a
-            href="/"
-            className="text-white hover:text-white active:text-white focus:text-white"
-          >
+        <div className="head flex space-x-4 mr-4">
+          <a href="/">
             <span className="linkler">Ana Sayfa</span>
           </a>
-          <a
-            href="/share"
-            className="text-white hover:text-white active:text-white focus:text-white"
-          >
+          <a href="/ai-models">
+            <span className="linkler">Modeller</span>
+          </a>
+          <a href="/share">
             <span className="linkler">Tablolar</span>
           </a>
-          <a
-            href="/team"
-            className="text-white hover:text-white active:text-white focus:text-white"
-          >
+          <a href="/team">
             <span className="linkler">Ekibimiz</span>
           </a>
-          <a
-            href="/about"
-            className="text-white hover:text-white active:text-white focus:text-white"
-          >
-            <span className="linkler">Hakkımızda</span>
-          </a>
-          <a
-            href="/login"
-            className="text-white flex items-center hover:text-white active:text-white focus:text-white"
+          
+          <a href="/login"
+            className="flex items-center"
           >
             <FaRegUser className="text-lg mr-6 ml-2" />
           </a>

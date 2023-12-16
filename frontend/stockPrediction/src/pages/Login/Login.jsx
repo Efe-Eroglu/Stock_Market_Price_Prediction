@@ -4,6 +4,7 @@ import {message} from "antd";
 import {useNavigate} from "react-router-dom"
 
 const Login = () => {
+
   const [signState, setSignState] = useState(false);
 
   const [formData, setFormData] = useState({
@@ -18,6 +19,7 @@ const Login = () => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
+
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
@@ -31,7 +33,8 @@ const Login = () => {
 
       if (response.ok){
         const data = await response.json();
-        localStorage.setItem("user",JSON.stringify(data));
+        const {password, ...rest} = data; 
+        localStorage.setItem("user",JSON.stringify(rest));
         message.success("Kayıt İşlemi Başarılı")
         navigate("/");
         
@@ -148,7 +151,7 @@ const Login = () => {
                 Giriş Yap
               </button>
             </div>
-            <img src="/loginImages/giris_panel.png" className="image" alt="" />
+            <img src="/loginImages/deneme3.png" className="image" alt="" />
           </div>
         </div>
       </div>

@@ -44,3 +44,12 @@ header {
   position: absolute;
   margin-left: 5%;
 }
+
+.head a,
+.head a:hover,
+.head a:active,
+.head a:link,
+.head a:focus
+{
+  color: white;
+}

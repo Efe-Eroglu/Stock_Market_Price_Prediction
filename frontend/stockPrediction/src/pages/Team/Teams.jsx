@@ -11,7 +11,7 @@ const Teams = () => {
           <div className="ekip mt-10">
             <div className="uye">
               <div className="left">
-                <div className="fotograf"> efe foto</div>
+                <div className="fotograf" id="efe"> Efe </div>
               </div>
               <div className="right">
                 <h1 className="text-2xl">
@@ -29,7 +29,9 @@ const Teams = () => {
 
             <div className="uye">
               <div className="left">
-                <div className="fotograf">Ahmet Utku Foto</div>
+                <div className="fotograf">
+                  Ahmet
+                </div>
               </div>
               <div className="right">
                 <h1 className="text-2xl">Yapay Zeka Geliştirici</h1>
@@ -45,7 +47,7 @@ const Teams = () => {
 
             <div className="uye">
               <div className="left">
-                <div className="fotograf">Faik foto</div>
+                <div className="fotograf">Faik</div>
               </div>
               <div className="right">
                 <h1 className="text-2xl">Veri Tabanı Sorumlusu</h1>
@@ -61,7 +63,7 @@ const Teams = () => {
 
             <div className="uye">
               <div className="left">
-                <div className="fotograf">emir foto</div>
+                <div className="fotograf">Emir</div>
               </div>
               <div className="right">
                 <h1 className="text-2xl">Backend Geliştirici</h1>
