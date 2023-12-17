@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./anaSayfa.css";
 
 const AnaSayfa = () => {
@@ -31,6 +31,15 @@ const AnaSayfa = () => {
     setCurrentIndex(index);
   };
 
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % slider_content.length);
+    }, 5000);
+
+    return () => clearInterval(intervalId);
+  }, [currentIndex, slider_content.length]);
+  
+  
   return (
     <div className="slider">
       <div className="block">
@@ -42,7 +51,7 @@ const AnaSayfa = () => {
           className="carousel slide"
           data-ride="carousel"
         >
-          <div className="carousel-inner z-5">
+          <div className="carousel-inner z-5 ">
             <div className="carousel-item active">
               <div>
                 <div className="row">

@@ -1,64 +1,166 @@
 import { useState } from "react";
-import "./hamburgerMenu.css"
+import "./hamburgerMenu.css";
 const HamburgerMenu = () => {
+  const [burger_class, setBurgerClass] = useState("burger-bar unclicked");
+  const [menu_class, setMenuClass] = useState("menu hidden");
+  const [isMenuClicked, setIsMenuClicked] = useState(false);
 
-    const [burger_class, setBurgerClass] = useState("burger-bar unclicked");
-    const [menu_class, setMenuClass] = useState("menu hidden");
-    const [isMenuClicked, setIsMenuClicked] = useState(false);
-  
-    const updateMenu = () => {
-      if (!isMenuClicked) {
-        setBurgerClass("burger-bar clicked");
-        setMenuClass("menu visible");
-      } else {
-        setBurgerClass("burger-bar unclicked");
-        setMenuClass("menu hidden");
-      }
-      setIsMenuClicked(!isMenuClicked);
-    };
+  const updateMenu = () => {
+    if (!isMenuClicked) {
+      setBurgerClass("burger-bar clicked");
+      setMenuClass("menu visible");
+    } else {
+      setBurgerClass("burger-bar unclicked");
+      setMenuClass("menu hidden");
+    }
+    setIsMenuClicked(!isMenuClicked);
+  };
+
+  const hamburger_content = [
+    {
+      name: "Akbank",
+      target: "/share",
+    },
+    {
+      name: "Alarko Holding",
+      target: "/share",
+    },
+    {
+      name: "Arçelik",
+      target: "/share",
+    },
+    {
+      name: "Aselsan",
+      target: "/share",
+    },
+    {
+      name: "Astor",
+      target: "/share",
+    },
+    {
+      name: "Bim A.Ş",
+      target: "/share",
+    },
+    {
+      name: "Emlak Konut GMYO",
+      target: "/share",
+    },
+    {
+      name: "Enka İnşaat",
+      target: "/share",
+    },
+    {
+      name: "Ereğli Demir Çelik",
+      target: "/share",
+    },
+    {
+      name: "Ford Otosan",
+      target: "/share",
+    },
+    {
+      name: "Granti BBVA",
+      target: "/share",
+    },
+    {
+      name: "Gübre",
+      target: "/share",
+    },
+    {
+      name: "Hektaş A.Ş",
+      target: "/share",
+    },
+    {
+      name: "İş Bankası",
+      target: "/share",
+    },
+    {
+      name: "Koç Holding",
+      target: "/share",
+    },
+    {
+      name: "Kontrolmatik",
+      target: "/share",
+    },
+    {
+      name: "Koza Altın",
+      target: "/share",
+    },
+    {
+      name: "Kardemir",
+      target: "/share",
+    },
+    {
+      name: "Odaş Elektrik",
+      target: "/share",
+    },
+    {
+      name: "Oyak Çimento",
+      target: "/share",
+    },
+    {
+      name: "Petkim",
+      target: "/share",
+    },
+    {
+      name: "Pegasus",
+      target: "/share",
+    },
+    {
+      name: "Sabancı Holding",
+      target: "/share",
+    },
+    {
+      name: "Sasa Polyester",
+      target: "/share",
+    },
+    {
+      name: "Şişe Cam",
+      target: "/share",
+    },
+    {
+      name: "Turkcell",
+      target: "/share",
+    },
+    {
+      name: "Şişe Cam",
+      target: "/share",
+    },
+    {
+      name: "Türk Hava Yolları",
+      target: "/share",
+    },
+    {
+      name: "Tofaş Oto",
+      target: "/share",
+    },
+    {
+      name: "Tüpraş",
+      target: "/share",
+    },
+    {
+      name: "Yapı Kredi",
+      target: "/share",
+    },
+  ];
 
   return (
     <div>
-          <div className="burger-menu" onClick={updateMenu}>
-            <div className={burger_class}></div>
-            <div className={burger_class}></div>
-            <div className={burger_class}></div>
-          </div>
-          <div className={menu_class}>
-            <div className="akbank">Akbank</div>
-            <div className="akbank">Alarko Holding</div>
-            <div className="akbank">Arçelik</div>
-            <div className="akbank">Aselsan</div>
-            <div className="akbank">Astor</div>
-            <div className="akbank">Bim A.Ş</div>
-            <div className="akbank">Emlak Konut GMYO</div>
-            <div className="akbank">Enka İnşaat</div>
-            <div className="akbank">Ereğli Demir Çelik</div>
-            <div className="akbank">Ford Otosan</div>
-            <div className="akbank">Granti BBVA</div>
-            <div className="akbank">Gübre</div>
-            <div className="akbank">Hektaş A.Ş</div>
-            <div className="akbank">İş Bankası</div>
-            <div className="akbank">Koç Holding</div>
-            <div className="akbank">Kontrolmatik</div>
-            <div className="akbank">Koza Altın</div>
-            <div className="akbank">Kardemir</div>
-            <div className="akbank">Odaş Elektrik</div>
-            <div className="akbank">Oyak Çimento</div>
-            <div className="akbank">Petkim</div>
-            <div className="akbank">Pegasus</div>
-            <div className="akbank">Sabancı Holding</div>
-            <div className="akbank">Sasa Polyester</div>
-            <div className="akbank">Şişe Cam</div>
-            <div className="akbank">Turkcell</div>
-            <div className="akbank">Türk Hava Yolları</div>
-            <div className="akbank">Tofaş Oto</div>
-            <div className="akbank">Tüpraş</div>
-            <div className="akbank">Yapı Kredi</div>
+      <div className="burger-menu" onClick={updateMenu}>
+        <div className={burger_class}></div>
+        <div className={burger_class}></div>
+        <div className={burger_class}></div>
+      </div>
+      <div className={menu_class}>
 
+        {hamburger_content.map((item, index) => (
+          <div key={index}>
+            <a href={item.target}>{item.name}</a>
           </div>
+        ))}
+        
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default HamburgerMenu
+export default HamburgerMenu;

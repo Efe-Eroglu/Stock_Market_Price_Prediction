@@ -33,11 +33,11 @@
     border-radius: 25px;
     height: 400px;
     width: 600px;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.8s ease-in-out;
 }
 
 #tablo:hover{
-  transform: scale(1.1);
+  transform: scale(1.06);
   cursor: pointer;
 }
 

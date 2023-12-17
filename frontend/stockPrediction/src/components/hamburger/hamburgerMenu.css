@@ -1,83 +1,87 @@
-
 .burger-menu {
-    width: 4em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    cursor: pointer;
-    padding-left: 8px;
-    
-  }
-  
-  .burger-bar {
-    margin: 3px;
-    width: 2rem;
-    height: 3px;
-    background-color: rgb(255, 255, 255);
-    border-radius: 0.5em;
-  }
-  
-  .hidden {
-  
-    display: none;
-  }
-  
-  .visible {
-    display: block;
-    background-image: linear-gradient(
-        to top,
-        rgba(10, 10, 69, 0.993),
-        rgba(24, 24, 91, 0.977),
-        rgba(16, 16, 90, 0.964),
-        rgb(7, 7, 66)
-      );
-    position: absolute;
-    left: 0;
-    top: 64px;
-    width: 250px;
-    z-index: 1;
-    color: white;
-    font-size: 20px;
-    overflow-y: auto;
-    max-height: 625px;
-    scroll-behavior: smooth;
-    
-    
-  }
+  width: 4em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding-left: 8px;
+}
 
-  .visible::-webkit-scrollbar{
-    display: none;
-    scroll-behavior: smooth;
-  }
-  
-  .visible div{
-      padding: 13px;
-      border-bottom:1px solid whitesmoke ;
-      cursor: pointer;
-  }
-  
-  .burger-bar.clicked:nth-child(1) {
-    transform: rotate(45deg) translate(0.75em, 1.25em);
-    transition: ease-out 0.5s;
-    position: absolute;
-    top: 10%;
-  }
-  
-  .burger-bar.clicked:nth-child(2) {
-    transform: scale(0);
-    transition: ease-out 0.5s;
-  }
-  
-  .burger-bar.clicked:nth-child(3) {
-    transform: rotate(135deg) translate(-0.45em, 1em);
-    transition: ease-out 0.5s;
-    position: absolute;
-    top: 70%;
-  }
-  
-  .burger-bar.unclicked {
-    transform: rotate(0) translate(0);
-    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
-  }
-  
+.burger-bar {
+  margin: 3px;
+  width: 2rem;
+  height: 3px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 0.5em;
+}
+
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: block;
+  background-image: linear-gradient(
+    to right,
+    rgba(9, 9, 54, 0.993),
+    rgba(11, 11, 66, 0.977),
+    rgba(12, 12, 56, 0.964),
+    #060649
+  );
+  position: absolute;
+  left: 0;
+  top: 64px;
+  width: 250px;
+  z-index: 1;
+  color: white;
+  font-size: 20px;
+  overflow-y: auto;
+  max-height: 625px;
+  scroll-behavior: smooth;
+}
+
+.visible::-webkit-scrollbar {
+  display: none;
+  scroll-behavior: smooth;
+}
+
+.visible div {
+  padding: 13px;
+  border-bottom: 1px solid whitesmoke;
+}
+
+.visible div a {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.visible div a:hover {
+  color: white;
+  cursor: pointer;
+  transform: scale(1.1);
+}
+
+.burger-bar.clicked:nth-child(1) {
+  transform: rotate(45deg) translate(0.75em, 1.25em);
+  transition: ease-out 0.5s;
+  position: absolute;
+  top: 10%;
+}
+
+.burger-bar.clicked:nth-child(2) {
+  transform: scale(0);
+  transition: ease-out 0.5s;
+}
+
+.burger-bar.clicked:nth-child(3) {
+  transform: rotate(135deg) translate(-0.45em, 1em);
+  transition: ease-out 0.5s;
+  position: absolute;
+  top: 70%;
+}
+
+.burger-bar.unclicked {
+  transform: rotate(0) translate(0);
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+}
