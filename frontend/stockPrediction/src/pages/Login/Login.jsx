@@ -7,17 +7,22 @@ const Login = () => {
 
   const [signState, setSignState] = useState(false);
 
-  const [formData, setFormData] = useState({
+  const [registerFormData, setRegisterFormData] = useState({
     user_name: "",
+    user_email: "",
+    user_password: "",
+  });
+
+  const [loginFormData, setLoginFormData] = useState({
     user_email: "",
     user_password: "",
   });
 
   const navigate = useNavigate()
 
-  const HandleInputChange = (e) => {
+  const handleRegisterInputChange = (e) => {
     const { name, value } = e.target;
-    setFormData({ ...formData, [name]: value });
+    setRegisterFormData({ ...registerFormData, [name]: value });
   };
 
   const handleRegister = async (e) => {
@@ -28,7 +33,7 @@ const Login = () => {
         headers: {
           "content-Type": "application/json",
         },
-        body:JSON.stringify(formData),
+        body:JSON.stringify(registerFormData),
       });
 
       if (response.ok){
@@ -56,20 +61,55 @@ const Login = () => {
     setSignState(true);
   };
 
+  const handleLogin = async (e) => {
+
+    e.preventDefault();
+    try {
+      const response = await fetch("login api adress", {
+        method: "POST",
+        headers: {
+          "content-Type": "application/json",
+        },
+        body:JSON.stringify(loginFormData),
+      });
+
+      if (response.ok){
+        const data = await response.json();
+        localStorage.setItem("user",JSON.stringify(data));
+        message.success("Giriş Başarılı")
+        navigate("/home");
+        
+      }
+      else{
+        message.error("Giriş başarısız")
+      }
+
+    } catch (error) {
+      console.log("Giriş hatası:" , error);
+    }
+  };
+
+  const handleLoginInputChange = (e) => {
+    const { name, value } = e.target;
+    setLoginFormData({ ...loginFormData, [name]: value });
+  };
+
   return (
     <div className="login-page-content ">
       <div className={`container ${signState ? "sign-up-mode" : ""}`}>
         <div className="forms-container">
           <div className="signin-signup">
-            <form className="sign-in-form">
+           
+           {/* User Login İşlemi*/}
+            <form className="sign-in-form" onSubmit={handleLogin}>
               <h2 className="title mb-6">Giriş Yap</h2>
               <div className="input-field">
                 <i className="bx bxs-user"></i>
-                <input type="text" placeholder="Kullanıcı Adı" />
+                <input type="email" placeholder="Kullanıcı Email" name="user_email" onChange={handleLoginInputChange}/>
               </div>
               <div className="input-field">
                 <i className="bx bxs-lock-alt"></i>
-                <input type="password" placeholder="Parola" />
+                <input type="password" placeholder="Parola" name="user_password"/>
               </div>
               <input
                 type="submit"
@@ -81,6 +121,9 @@ const Login = () => {
                 kullanmaya devam edebilirsin.
               </p>
             </form>
+
+
+           {/* User Register İşlemi*/}
             <form className="sign-up-form" onSubmit={handleRegister}>
               <h2 className="title">Kayıt Ol</h2>
               <div className="input-field">
@@ -88,7 +131,7 @@ const Login = () => {
                 <input
                   type="text"
                   placeholder="Kullanıcı Adı"
-                  onChange={HandleInputChange}
+                  onChange={handleRegisterInputChange}
                   name="user_name"
                 />
               </div>
@@ -97,7 +140,7 @@ const Login = () => {
                 <input
                   type="email"
                   placeholder="E-Mail"
-                  onChange={HandleInputChange}
+                  onChange={handleRegisterInputChange}
                   name="user_email"
                 />
               </div>
@@ -106,7 +149,7 @@ const Login = () => {
                 <input
                   type="password"
                   placeholder="Parola"
-                  onChange={HandleInputChange}
+                  onChange={handleRegisterInputChange}
                   name="user_password"
                 />
               </div>
@@ -120,6 +163,9 @@ const Login = () => {
                 olabilirsin
               </p>
             </form>
+
+
+
           </div>
         </div>
         <div className="panels-container">
