@@ -19,7 +19,7 @@ const Header = () => {
         </div>
 
         <div className="head flex space-x-4 mr-4">
-          <a href="/">
+          <a href="/home">
             <span className="linkler">Ana Sayfa</span>
           </a>
           <a href="/ai-models">

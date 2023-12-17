@@ -36,7 +36,7 @@ const Login = () => {
         const {password, ...rest} = data; 
         localStorage.setItem("user",JSON.stringify(rest));
         message.success("Kayıt İşlemi Başarılı")
-        navigate("/");
+        navigate("/home");
         
       }
       else{
@@ -138,7 +138,7 @@ const Login = () => {
                 Kayıt Ol
               </button>
             </div>
-            <img src="/loginImages/hero.png" className="image" alt="" />
+            <img src="/loginImages/phone.png" className="image" alt="" />
           </div>
           <div className="panel right-panel">
             <div className="content">
@@ -151,7 +151,7 @@ const Login = () => {
                 Giriş Yap
               </button>
             </div>
-            <img src="/loginImages/deneme3.png" className="image" alt="" />
+            <img src="/loginImages/right.png" className="image" alt="" />
           </div>
         </div>
       </div>

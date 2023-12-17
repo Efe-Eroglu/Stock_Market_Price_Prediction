@@ -1,0 +1,26 @@
+.error-page{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 50;
+    background-image: url("/errorPageImages/arkapl.jpg");
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.error-page h1{
+    color: white;
+    font-size: 50px;
+    position: absolute;
+    top: 11%;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#error-arka{
+    height: 500px;
+}
