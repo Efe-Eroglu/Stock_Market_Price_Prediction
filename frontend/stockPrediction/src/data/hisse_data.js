@@ -1,0 +1,186 @@
+const path = "./shareImages//";
+
+const share_content = [
+    {
+      name: "Akbank",
+      id:"AKBNK",
+      img:path+"akbank.jpg",
+      target: "/share",
+    },
+    {
+      name: "Alarko Holding",
+      id:"ALARK",
+      img:"",
+      target: "/share",
+    },
+    {
+      name: "Arçelik",
+      id:"ARCLK",
+      img:path+"arcelik.jpg",
+      target: "/share",
+    },
+    {
+      name: "Aselsan",
+      id:"ASELS",
+      img:"",
+      target: "/share",
+    },
+    {
+      name: "Astor",
+      id:"ASTOR",
+      img:path+"astor.png",
+      target: "/share",
+    },
+    {
+      name: "Bim A.Ş",
+      id:"BIMAS",
+      img:path+"bim.png",
+      target: "/share",
+    },
+    {
+      name: "Emlak Konut GMYO",
+      id:"EKGYO",
+      img:"",
+      target: "/share",
+    },
+    {
+      name: "Enka İnşaat",
+      id:"ENKAI",
+      img:"",
+      target: "/share",
+    },
+    {
+      name: "Ereğli Demir Çelik",
+      id:"EREGL",
+      img:"",
+      target: "/share",
+    },
+    {
+      name: "Ford Otosan",
+      id:"FROTO",
+      img:"",
+      target: "/share",
+    },
+    {
+      name: "Garanti BBVA",
+      id:"GARAN",
+      img:"",
+      target: "/share",
+    },
+    {
+      name: "Gübre T.A.Ş",
+      id:"GUBRF",
+      img:"",
+      target: "/share",
+    },
+    {
+      name: "Hektaş A.Ş",
+      id:"HEKTS",
+      img:"",
+      target: "/share",
+    },
+    {
+      name: "İş Bankası",
+      id:"ISCTR",
+      img:"",
+      target: "/share",
+    },
+    {
+      name: "Koç Holding",
+      id:"KCHOL",
+      img:"",
+      target: "/share",
+    },
+    {
+      name: "Kontrolmatik",
+      id:"KONTR",
+      img:"",
+      target: "/share",
+    },
+    {
+      name: "Koza Altın",
+      id:"KOZAL",
+      img:"",
+      target: "/share",
+    },
+    {
+      name: "Kardemir",
+      id:"KRDMD",
+      img:"",
+      target: "/share",
+    },
+    {
+      name: "Odaş Elektrik",
+      id:"ODAS",
+      img:"",
+      target: "/share",
+    },
+    {
+      name: "Oyak Çimento",
+      id:"OYAKC",
+      img:"",
+      target: "/share",
+    },
+    {
+      name: "Petkim",
+      id:"PETKM",
+      img:"",
+      target: "/share",
+    },
+    {
+      name: "Pegasus",
+      id:"PGSUS",
+      img:"",
+      target: "/share",
+    },
+    {
+      name: "Sabancı Holding",
+      id:"SAHOL",
+      img:"",
+      target: "/share",
+    },
+    {
+      name: "Sasa Polyester",
+      id:"SASA",
+      img:path+"sasa.png",
+      target: "/share",
+    },
+    {
+      name: "Turkcell",
+      id:"SISE",
+      img:"",
+      target: "/share",
+    },
+    {
+      name: "Şişe Cam",
+      id:"TCELL",
+      img:"",
+      target: "/share",
+    },
+    {
+      name: "Türk Hava Yolları",
+      id:"THYAO",
+      img:"",
+      target: "/share",
+    },
+    {
+      name: "Tofaş Oto",
+      id:"TOASO",
+      img:"",
+      target: "/share",
+    },
+    {
+      name: "Tüpraş",
+      id:"TUPRS",
+      img:"",
+      target: "/share",
+    },
+    {
+      name: "Yapı Kredi",
+      id:"YKBNK",
+      img:"",
+      target: "/share",
+    },
+  ];
+
+  export default share_content;

@@ -51,7 +51,7 @@ const Teams = () => {
               </div>
               <div className="right">
                 <h1 className="text-2xl">Veri Tabanı Sorumlusu</h1>
-                <h2 className="text-xl mb-2">Faik Arda Güler</h2>
+                <h2 className="text-xl mb-2">Faik Döner</h2>
                 <p>
                   Lorem ipsum, dolor sit amet consectetur adipisicing elit. Esse
                   repellat culpa, ad maiores excepturi doloribus, impedit quo
