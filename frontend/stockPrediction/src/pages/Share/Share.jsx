@@ -7,7 +7,7 @@ import { Link } from "react-router-dom";
 const Share = () => {
   return (
     <div className="hisse-ekrani w-screen relative">
-      <div className="kartlar mb-10">
+      <div className="kartlar pb-14">
         <Row gutter={16}>
           {hisse_data.map((hisse, index) => (
             <Col span={8} key={index}>

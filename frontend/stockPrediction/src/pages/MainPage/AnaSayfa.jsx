@@ -1,31 +1,10 @@
 import { useEffect, useState } from "react";
 import "./anaSayfa.css";
+import slider_content from "../../data/main_slider_data"; "../../data/main_slider_data"
 
 const AnaSayfa = () => {
-  
-  const slider_content = [
-    {
-      img_path: "/mainPageImages/slider1.png",
-      text:
-        "Bist 30 hisseleri üzerinde Artificial Neutral Network modelinin en doğru parametrelerle eğitilmiş modelini incele!",
-        target:"/ai-models",
-    },
-    {
-      img_path: "/mainPageImages/slider2.png",
-      text:
-        "Bist 30 hisseleri üzerinde Decision Tree modelinin en doğru parametrelerle eğitilmiş modelini incele!",
-        target:"/ai-models",
-    },
-    {
-      img_path: "/mainPageImages/slider3.png",
-      text:
-        "Bist 30 hisseleri üzerinde Random Forest modelinin en doğru parametrelerle eğitilmiş modelini incele!",
-        target:"/ai-models",
-      },
-  ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
-  
 
   const changeSlide = (index) => {
     setCurrentIndex(index);
@@ -38,9 +17,9 @@ const AnaSayfa = () => {
 
     return () => clearInterval(intervalId);
   }, [currentIndex, slider_content.length]);
-  
-  
+
   return (
+    
     <div className="slider">
       <div className="block">
         <img src="mainPageImages/hero-bg.png" className="heroBg" alt="" />
@@ -51,9 +30,12 @@ const AnaSayfa = () => {
           className="carousel slide"
           data-ride="carousel"
         >
-          <div className="carousel-inner z-5 ">
-            <div className="carousel-item active">
-              <div>
+
+          <div className="carousel-inner">
+            {slider_content.map((slide, index) => (
+              <div
+                key={index}
+                className="carousel-item">
                 <div className="row">
                   <div>
                     <div className="detail-box group">
@@ -61,11 +43,13 @@ const AnaSayfa = () => {
                         HİPER <br />
                         PARAMETRELER
                       </h1>
-                          <p>
-                            {`${slider_content[currentIndex].text}`}
-                          </p>
+                      <p
+                       style={{
+                        transition: "opacity 0.9s",
+                        opacity: index === currentIndex ? 1 : 0,
+                      }}>{`${slide.text}`}</p>
                       <div className="btn-box">
-                        <a href={`${slider_content[currentIndex].target}`} className="btn1">
+                        <a href={`${slide.target}`} className="btn1">
                           Hemen İncele
                         </a>
                       </div>
@@ -74,25 +58,27 @@ const AnaSayfa = () => {
                   <div>
                     <div className="img-box">
                       <img
-                        src={`${slider_content[currentIndex].img_path}`}
+                        src={`${slide.img_path}`}
                         id="resim"
                         alt=""
+                        style={{
+                          transition: "opacity 0.9s",
+                          opacity: index === currentIndex ? 1 : 0,
+                        }}
                       />
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
 
         <div className="slider-button">
           <ol className="carousel-indicators">
-            {slider_content.map((slide, index) => (
-              <li 
+            {slider_content.map((_, index) => (
+              <li
                 key={index}
-                data-target="#customCarousel1"
-                data-slide-to={index}
                 className={index === currentIndex ? "active" : ""}
                 onClick={() => changeSlide(index)}
               ></li>

@@ -3,7 +3,9 @@
     margin-left: 1px;
     margin-top: 1px;
 }
-    
+    .kartlar{
+      background-color: rgb(16, 24, 73);
+    }
 .hisse-kart{
     border: 1px solid rgba(163, 159, 159, 0.69);
     transition: transform 0.5s ease-in-out;

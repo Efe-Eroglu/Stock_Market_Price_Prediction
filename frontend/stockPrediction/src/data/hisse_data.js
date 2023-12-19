@@ -12,7 +12,6 @@ const share_content = [
       id:"ALARK",
       img:path+"alarko.svg",
       target:"/share"
-
     },
     {
       name: "Arçelik",
