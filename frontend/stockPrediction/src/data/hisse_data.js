@@ -5,181 +5,182 @@ const share_content = [
       name: "Akbank",
       id:"AKBNK",
       img:path+"akbank.jpg",
-      target: "/share",
+      target:"/share"
     },
     {
       name: "Alarko Holding",
       id:"ALARK",
-      img:"",
-      target: "/share",
+      img:path+"alarko.svg",
+      target:"/share"
+
     },
     {
       name: "Arçelik",
       id:"ARCLK",
-      img:path+"arcelik.jpg",
-      target: "/share",
+      img:path+"arcelik.svg",
+      target:"/share"
     },
     {
       name: "Aselsan",
       id:"ASELS",
-      img:"",
-      target: "/share",
+      img:path+"aselsan.png",
+      target:"/share"
     },
     {
       name: "Astor",
       id:"ASTOR",
       img:path+"astor.png",
-      target: "/share",
+      target:"/share"
     },
     {
       name: "Bim A.Ş",
       id:"BIMAS",
-      img:path+"bim.png",
-      target: "/share",
+      img:path+"bim.svg ",
+      target:"/share"
     },
     {
       name: "Emlak Konut GMYO",
       id:"EKGYO",
-      img:"",
-      target: "/share",
+      img:path+"ekgy.png",
+      target:"/share"
     },
     {
       name: "Enka İnşaat",
       id:"ENKAI",
-      img:"",
-      target: "/share",
+      img:path+"enka.svg",
+      target:"/share"
     },
     {
       name: "Ereğli Demir Çelik",
       id:"EREGL",
-      img:"",
-      target: "/share",
+      img:path+"eregli.jpg",
+      target:"/share"
     },
     {
       name: "Ford Otosan",
       id:"FROTO",
-      img:"",
-      target: "/share",
+      img:path+"ford.avif",
+      target:"/share"
     },
     {
       name: "Garanti BBVA",
       id:"GARAN",
-      img:"",
-      target: "/share",
+      img:path+"garanti.jpg",
+      target:"/share"
     },
     {
       name: "Gübre T.A.Ş",
       id:"GUBRF",
-      img:"",
-      target: "/share",
+      img:path+"gubretas.png",
+      target:"/share"
     },
     {
       name: "Hektaş A.Ş",
       id:"HEKTS",
-      img:"",
-      target: "/share",
+      img:path+"hektas.png",
+      target:"/share"
     },
     {
       name: "İş Bankası",
       id:"ISCTR",
-      img:"",
-      target: "/share",
+      img:path+"isbank.jpg",
+      target:"/share"
     },
     {
       name: "Koç Holding",
       id:"KCHOL",
-      img:"",
-      target: "/share",
+      img:path+"kochol.jpg",
+      target:"/share"
     },
     {
       name: "Kontrolmatik",
       id:"KONTR",
-      img:"",
-      target: "/share",
+      img:path+"kontrolmatik.jpg",
+      target:"/share"
     },
     {
       name: "Koza Altın",
       id:"KOZAL",
-      img:"",
-      target: "/share",
+      img:path+"kozal.png",
+      target:"/share"
     },
     {
       name: "Kardemir",
       id:"KRDMD",
-      img:"",
-      target: "/share",
+      img:path+"kardemir.png",
+      target:"/share"
     },
     {
       name: "Odaş Elektrik",
       id:"ODAS",
       img:"",
-      target: "/share",
+      target:"/share"
     },
     {
       name: "Oyak Çimento",
       id:"OYAKC",
-      img:"",
-      target: "/share",
+      img:path+"oyak.jpg",
+      target:"/share"
     },
     {
       name: "Petkim",
       id:"PETKM",
-      img:"",
-      target: "/share",
+      img:path+"petkm.jpeg",
+      target:"/share"
     },
     {
       name: "Pegasus",
       id:"PGSUS",
-      img:"",
-      target: "/share",
+      img:path+"pegasus.jpg",
+      target:"/share"
     },
     {
       name: "Sabancı Holding",
       id:"SAHOL",
-      img:"",
-      target: "/share",
+      img:path+"sabancı.png",
+      target:"/share"
     },
     {
       name: "Sasa Polyester",
       id:"SASA",
       img:path+"sasa.png",
-      target: "/share",
+      target:"/share"
     },
     {
       name: "Turkcell",
-      id:"SISE",
-      img:"",
-      target: "/share",
+      id:"TCELL",
+      img:path+"tcell.jpg",
+      target:"/share"
     },
     {
       name: "Şişe Cam",
-      id:"TCELL",
-      img:"",
-      target: "/share",
+      id:"SISE",
+      img:path+"sisecam.png",
+      target:"/share"
     },
     {
       name: "Türk Hava Yolları",
       id:"THYAO",
-      img:"",
-      target: "/share",
+      img:path+"thy.jpg",
+      target:"/share"
     },
     {
       name: "Tofaş Oto",
       id:"TOASO",
-      img:"",
-      target: "/share",
+      img:path+"tofas.jpeg",
+      target:"/share"
     },
     {
       name: "Tüpraş",
       id:"TUPRS",
-      img:"",
-      target: "/share",
+      img:path+"tupras.jpg",
+      target:"/share"
     },
     {
       name: "Yapı Kredi",
       id:"YKBNK",
-      img:"",
-      target: "/share",
+      img:path+"ykbank.jpg",
+      target:"/share"
     },
   ];
 

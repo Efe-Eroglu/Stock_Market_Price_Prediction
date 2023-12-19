@@ -34,6 +34,7 @@ const Header = () => {
           </a>
 
           {/*Kullanıcı öğesi olunca favoriler ve çıkış ikonunu getir*/}
+         
           {user && (
             <div className="flex items-center">
               <a href="/favourite-list">
@@ -42,7 +43,7 @@ const Header = () => {
               <a onClick={()=>{
                 if(window.confirm("Çıkış yapmak istediğinize emin misiniz?")){
                   localStorage.removeItem("user")
-                  window.location.href="/login";
+                  window.location.href="/home";
                 }
               }}> <IoIosLogOut className="text-2xl ml-3 cursor-pointer"/> </a>
             </div>

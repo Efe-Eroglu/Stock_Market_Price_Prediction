@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./login.css";
 import {message} from "antd";
 import {useNavigate} from "react-router-dom"
@@ -93,6 +93,7 @@ const Login = () => {
     const { name, value } = e.target;
     setLoginFormData({ ...loginFormData, [name]: value });
   };
+
 
   return (
     <div className="login-page-content ">
@@ -197,7 +198,7 @@ const Login = () => {
                 Giriş Yap
               </button>
             </div>
-            <img src="/loginImages/right.png" className="image" alt="" />
+            <img src="/loginImages/right.png" className="image" id="giris-resim" alt="" />
           </div>
         </div>
       </div>

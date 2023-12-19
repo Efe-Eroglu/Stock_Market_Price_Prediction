@@ -1,6 +1,7 @@
 .hisse-resim{
     height: 15rem;
-    
+    margin-left: 1px;
+    margin-top: 1px;
 }
     
 .hisse-kart{
@@ -10,4 +11,7 @@
 
 .hisse-kart:hover{
   transform: scale(1.06);
+}
+.ant-card-body{
+  background-color: rgb(253, 248, 248);
 }

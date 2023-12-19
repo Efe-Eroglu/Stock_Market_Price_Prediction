@@ -6,11 +6,12 @@ import { Link } from "react-router-dom";
 
 const Share = () => {
   return (
-    <div className="w-screen relative">
+    <div className="hisse-ekrani w-screen relative">
       <div className="kartlar mb-10">
         <Row gutter={16}>
           {hisse_data.map((hisse, index) => (
             <Col span={8} key={index}>
+              {/* <a href={`/share/${hisse.id}`}> */}
               <Card
                 className="hisse-kart"
                 hoverable
@@ -22,17 +23,18 @@ const Share = () => {
                 }}
 
                 cover={
-                <Link to={`/share/${hisse.id}`}>
+                  <Link to={`/share/${hisse.id}`}>
                   <img
                     className="hisse-resim"
                     alt={hisse.name}
+                    width={"298px"}
                     title={hisse.name}
                     src={hisse.img}
                   />
                   </Link>
                 }
               >
-                <span className="text-xl">{hisse.name}</span>
+                <div className="text-xl">{hisse.name}</div>
               </Card>
             </Col>
           ))}

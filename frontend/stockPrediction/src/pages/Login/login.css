@@ -173,7 +173,6 @@ form.sign-up-form{
     border-color: #0b2965;
 }
 
-
 .panels-container{
     position: absolute;
     width: 100%;
@@ -225,6 +224,10 @@ form.sign-up-form{
     height: 41px;
     font-weight: 600;
     font-size: 0.8rem;
+}
+
+#giris-resim{
+    width: 80%;
 }
 
 .image{
