@@ -1,7 +1,8 @@
 const express = require("express")
 const router = express.Router();
 const bcrypt = require("bcryptjs")
-const User_Schema = require("../models/user_schema.js")
+const User_Schema = require("../models/user_schema.js");
+
 
 router.get("/", async(req,res)=>{
   try {
@@ -52,10 +53,8 @@ router.post("/register",async(req,res)=>{
 router.post("/login",async (req,res)=>{
     try {
         const {email,password} = req.body;
-        
-        const user = await User_Schema.findOne({email});
-
         console.log({email,password});
+        const user = await User_Schema.findOne({email});
 
         if(!user){
             return res.status(401).json({error:"Invalid email"})
@@ -63,6 +62,7 @@ router.post("/login",async (req,res)=>{
 
         const isPasswordValid = await bcrypt.compare(password,user.password)
 
+       
         if(!isPasswordValid){
             return res.status(401).json({error:"Invalid password"})
         }
@@ -70,7 +70,7 @@ router.post("/login",async (req,res)=>{
         res.status(200).json({
             id:user._id,
             email:user.email,
-            username:user.username
+            name:user.name
         });
 
     } catch (error) {

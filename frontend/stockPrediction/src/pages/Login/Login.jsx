@@ -77,8 +77,7 @@ const Login = () => {
         const data = await response.json();
         localStorage.setItem("user",JSON.stringify(data));
         message.success("Giriş Başarılı")
-        navigate("/home");
-        
+        window.location.href = '/home';
       }
       else{
         message.error("Giriş başarısız")
@@ -96,6 +95,7 @@ const Login = () => {
 
 
   return (
+
     <div className="login-page-content ">
       <div className={`container ${signState ? "sign-up-mode" : ""}`}>
         <div className="forms-container">
@@ -110,7 +110,7 @@ const Login = () => {
               </div>
               <div className="input-field">
                 <i className="bx bxs-lock-alt"></i>
-                <input type="password" placeholder="Parola" name="password"/>
+                <input type="password" placeholder="Parola" name="password" onChange={handleLoginInputChange}/>
               </div>
               <input
                 type="submit"
@@ -148,7 +148,7 @@ const Login = () => {
               <div className="input-field">
                 <i className="bx bxs-lock-alt"></i>
                 <input
-                  type="password"
+                  type="string"
                   placeholder="Parola"
                   onChange={handleRegisterInputChange}
                   name="password"
