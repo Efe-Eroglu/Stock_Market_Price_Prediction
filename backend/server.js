@@ -1,6 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv")
+const mainRoute = require("./routes/index.js")
 const app = express();
 
 
@@ -14,14 +15,8 @@ const connect = async () =>{
         throw error;
     }
 }
-app.get("/", (req,res)=>{
-    res.send("Backend")
-})
 
-app.get("/api", (req,res)=>{
-    res.send("Api pages")
-})
-
+app.use("/api",mainRoute)
 
 app.listen(process.env.PORT,()=>{
     connect();
