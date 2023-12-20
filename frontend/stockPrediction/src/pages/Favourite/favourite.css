@@ -1,0 +1,43 @@
+
+.table-button {
+    display: flex;
+    position: absolute;
+    left: 48%;
+    top: 45%;  
+    margin-top: 335px;
+
+  }
+
+  .table-button .carousel-indicators li {
+    margin-right: 5px;
+  }
+
+  .table-button .carousel-indicators li.active {
+    width: 20px;
+    height: 20px;
+    background-color: #ffffff;
+  }
+  
+  .table-button .carousel-indicators {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  
+  .table-button .carousel-indicators li {
+    background-color: #ffffff;
+    width: 12px;
+    height: 12px;
+    border-radius: 100%;
+    opacity: 1;
+  }
+  
+  .table-button .carousel-indicators li.active {
+    width: 20px;
+    height: 20px;
+    background-color: #00bbf0;
+  }
+  

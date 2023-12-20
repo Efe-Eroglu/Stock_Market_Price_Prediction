@@ -29,7 +29,7 @@ function App() {
           <Route path="/team" element={<Teams />} />
           <Route path="/ai-models" element={<Model />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/favourite-list" element={<Tablolar />} />
+          <Route path="/favourite-list" element={<Favourite />} />
 
           <Route
             path="/share/:id"

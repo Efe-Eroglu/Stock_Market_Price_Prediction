@@ -18,16 +18,17 @@
 
 .hidden {
   display: none;
+  position: absolute;
+  left:-4em;
 }
 
 .visible {
   display: block;
   background-image: linear-gradient(
-    to right,
-    rgba(9, 9, 54, 0.993),
-    rgba(11, 11, 66, 0.977),
-    rgba(12, 12, 56, 0.964),
+    to left,
+    #16146B,
     #060649
+    
   );
   position: absolute;
   left: 0;

@@ -112,7 +112,7 @@ const share_content = [
     {
       name: "Odaş Elektrik",
       id:"ODAS",
-      img:"",
+      img:path+"odas.png",
       target:"/share"
     },
     {

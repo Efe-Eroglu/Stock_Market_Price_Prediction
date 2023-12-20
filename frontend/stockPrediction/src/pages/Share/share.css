@@ -1,19 +1,21 @@
-.hisse-resim{
-    height: 15rem;
-    margin-left: 1px;
-    margin-top: 1px;
-}
-    .kartlar{
-      background-color: rgb(16, 24, 73);
-    }
-.hisse-kart{
-    border: 1px solid rgba(163, 159, 159, 0.69);
-    transition: transform 0.5s ease-in-out;
+.hisse-ekrani{
+  padding-top: 50px;  
+  background-image: url("/teamImages/hero-bg.png");
+  background-color: rgba(27, 27, 84, 0.616);
 }
 
-.hisse-kart:hover{
-  transform: scale(1.06);
+.hisse-resim {
+  height: 15rem;
+  margin-left: 1px;
 }
-.ant-card-body{
-  background-color: rgb(253, 248, 248);
+
+.hisse-kart {
+  border: 1px solid rgba(4, 0, 0, 0.69);
+  transition: transform 0.7s ease-in-out;
+}
+ .hisse-kart:hover{
+  transform: scale(1.15);
+}  
+ .ant-card-body{
+  transition: transform 0.7s ease-in-out;
 }

@@ -1,9 +1,16 @@
-import "./favourite.css"
+import "./favourite.css";
+import { useState } from "react";
 
 const Favourite = () => {
-  return (
-    <div>Favourite</div>
-  )
-}
 
-export default Favourite
+  
+
+  return (
+    <div>
+
+favori listesi
+    </div>
+  );
+};
+
+export default Favourite;

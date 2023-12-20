@@ -8,14 +8,14 @@ const Login = () => {
   const [signState, setSignState] = useState(false);
 
   const [registerFormData, setRegisterFormData] = useState({
-    user_name: "",
-    user_email: "",
-    user_password: "",
+    name: "",
+    email: "",
+    password: "",
   });
 
   const [loginFormData, setLoginFormData] = useState({
-    user_email: "",
-    user_password: "",
+    email: "",
+    password: "",
   });
 
   const navigate = useNavigate()
@@ -28,7 +28,7 @@ const Login = () => {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("api adress", {
+      const response = await fetch("http://localhost:5000/api/users/register", {
         method: "POST",
         headers: {
           "content-Type": "application/json",
@@ -41,7 +41,7 @@ const Login = () => {
         const {password, ...rest} = data; 
         localStorage.setItem("user",JSON.stringify(rest));
         message.success("Kayıt İşlemi Başarılı")
-        navigate("/home");
+        window.location.href = '/home';
         
       }
       else{
@@ -106,11 +106,11 @@ const Login = () => {
               <h2 className="title mb-6">Giriş Yap</h2>
               <div className="input-field">
                 <i className="bx bxs-user"></i>
-                <input type="email" placeholder="Kullanıcı Email" name="user_email" onChange={handleLoginInputChange}/>
+                <input type="email" placeholder="Kullanıcı Email" name="email" onChange={handleLoginInputChange}/>
               </div>
               <div className="input-field">
                 <i className="bx bxs-lock-alt"></i>
-                <input type="password" placeholder="Parola" name="user_password"/>
+                <input type="password" placeholder="Parola" name="password"/>
               </div>
               <input
                 type="submit"
@@ -133,7 +133,7 @@ const Login = () => {
                   type="text"
                   placeholder="Kullanıcı Adı"
                   onChange={handleRegisterInputChange}
-                  name="user_name"
+                  name="name"
                 />
               </div>
               <div className="input-field">
@@ -142,7 +142,7 @@ const Login = () => {
                   type="email"
                   placeholder="E-Mail"
                   onChange={handleRegisterInputChange}
-                  name="user_email"
+                  name="email"
                 />
               </div>
               <div className="input-field">
@@ -151,7 +151,7 @@ const Login = () => {
                   type="password"
                   placeholder="Parola"
                   onChange={handleRegisterInputChange}
-                  name="user_password"
+                  name="password"
                 />
               </div>
               <input

@@ -3,6 +3,7 @@ import "./hamburgerMenu.css";
 import hamburger_content from "../../data/hisse_data"
 
 const HamburgerMenu = () => {
+  
   const [burger_class, setBurgerClass] = useState("burger-bar unclicked");
   const [menu_class, setMenuClass] = useState("menu hidden");
   const [isMenuClicked, setIsMenuClicked] = useState(false);
@@ -26,7 +27,6 @@ const HamburgerMenu = () => {
         <div className={burger_class}></div>
       </div>
       <div className={menu_class}>
-
         {hamburger_content.map((item, index) => (
           <div key={index}>
             <a href={item.target}>{item.name}</a>
@@ -39,3 +39,4 @@ const HamburgerMenu = () => {
 };
 
 export default HamburgerMenu;
+
