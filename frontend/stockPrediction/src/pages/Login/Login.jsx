@@ -41,7 +41,7 @@ const Login = () => {
         const {password, ...rest} = data; 
         localStorage.setItem("user",JSON.stringify(rest));
         message.success("Kayıt İşlemi Başarılı")
-        window.location.href = '/home';
+        window.location.href = '/login';
         
       }
       else{

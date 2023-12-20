@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv")
 const mainRoute = require("./routes/index.js")
+const cors = require('cors');
 const app = express();
 
 
@@ -18,7 +19,7 @@ const connect = async () =>{
 
 //Middlewares
 app.use(express.json());
-
+app.use(cors());
 app.use("/api",mainRoute)
 
 app.listen(process.env.PORT,()=>{
