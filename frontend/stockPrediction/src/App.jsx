@@ -8,18 +8,26 @@ import Favourite from "./pages/Favourite/Favourite";
 import Login from "./pages/Login/Login";
 import Header from "./components/header/Header";
 import Error from "./pages/Error/Error";
-import share_content from "./data/hisse_data";
 import Tablolar from "./pages/Tablolar/Tablolar";
 import { useEffect, useState } from "react";
+import axios from "axios"
 
 function App() {
-  const isLoginPage = window.location.pathname === "/login";
-
   
+  const [hisseler,setHisseler] = useState([])
+
+  useEffect(()=>{
+    axios
+    .get("http://localhost:5000/api/share")
+    .then(response => setHisseler(response.data))
+    .catch(error => console.log({error}))
+  },[])
+
+
+  const isLoginPage = window.location.pathname === "/login";
   return (
     <div className="h-screen relative">
-      {/*h-screen relative h-fit*/}
-
+      
       {isLoginPage ? null : <Header />}
 
       <Router>
@@ -30,11 +38,7 @@ function App() {
           <Route path="/ai-models" element={<Model />} />
           <Route path="/login" element={<Login />} />
           <Route path="/favourite-list" element={<Favourite />} />
-
-          <Route
-            path="/share/:id"
-            element={<Tablolar />}
-          />
+          <Route path="/share/:id" element={<Tablolar/>}/>
           <Route path="*" element={<Error />} />
         </Routes>
       </Router>

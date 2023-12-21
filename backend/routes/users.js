@@ -53,7 +53,6 @@ router.post("/register",async(req,res)=>{
 router.post("/login",async (req,res)=>{
     try {
         const {email,password} = req.body;
-        console.log({email,password});
         const user = await User_Schema.findOne({email});
 
         if(!user){
@@ -62,7 +61,6 @@ router.post("/login",async (req,res)=>{
 
         const isPasswordValid = await bcrypt.compare(password,user.password)
 
-       
         if(!isPasswordValid){
             return res.status(401).json({error:"Invalid password"})
         }

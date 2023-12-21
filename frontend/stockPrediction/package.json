@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "antd": "^5.12.2",
+    "axios": "^1.6.2",
     "coffee-script": "^1.12.7",
     "flowbite-react": "^0.7.2",
     "gulp-header": "^2.0.9",

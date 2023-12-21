@@ -18,8 +18,6 @@ const Login = () => {
     password: "",
   });
 
-  const navigate = useNavigate()
-
   const handleRegisterInputChange = (e) => {
     const { name, value } = e.target;
     setRegisterFormData({ ...registerFormData, [name]: value });
@@ -148,7 +146,7 @@ const Login = () => {
               <div className="input-field">
                 <i className="bx bxs-lock-alt"></i>
                 <input
-                  type="string"
+                  type="password"
                   placeholder="Parola"
                   onChange={handleRegisterInputChange}
                   name="password"

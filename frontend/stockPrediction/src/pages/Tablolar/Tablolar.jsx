@@ -1,9 +1,11 @@
-import React from 'react'
+import "./tablolar.css"
 
-const Tablolar = (props) => {
-  console.log(props);
+const Tablolar = () => {
+
   return (
-    <div className='w-screen relative'>Tablolar </div>
+    <div className='katman w-screen relative'>
+      <div className="tablo-icerik">Tablolar</div>  
+    </div>
   )
 }
 
