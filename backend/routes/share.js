@@ -2,7 +2,8 @@ const express = require("express");
 const router = express.Router();
 const ShareSchema = require("../models/share_schema.js");
 
-//Tüm Hisseleri Getir
+
+//Tüm hisseleri getirir
 router.get("/", async (req, res) => {
   try {
     const hisse = await ShareSchema.find();
@@ -13,7 +14,7 @@ router.get("/", async (req, res) => {
     res.status(500).json({ error: "Server Error" });
   }
 });
-
+//Id ye göre tek hisse getirir
 router.get("/:hisseID", async (req, res) => {
   try {
     const hisseID = req.params.hisseID;
@@ -34,3 +35,7 @@ router.get("/:hisseID", async (req, res) => {
 });
 
 module.exports = router;
+
+
+
+

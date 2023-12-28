@@ -14,14 +14,14 @@ import axios from "axios"
 
 function App() {
   
-  const [hisseler,setHisseler] = useState([])
+  // const [hisseler,setHisseler] = useState([])
 
-  useEffect(()=>{
-    axios
-    .get("http://localhost:5000/api/share")
-    .then(response => setHisseler(response.data))
-    .catch(error => console.log({error}))
-  },[])
+  // useEffect(()=>{
+  //   axios
+  //   .get("http://localhost:5000/api/share")
+  //   .then(response => setHisseler(response.data))
+  //   .catch(error => console.log({error}))
+  // },[])
 
 
   const isLoginPage = window.location.pathname === "/login";

@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import "./login.css";
 import {message} from "antd";
-import {useNavigate} from "react-router-dom"
 
 const Login = () => {
 

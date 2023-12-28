@@ -19,3 +19,15 @@
  .ant-card-body{
   transition: transform 0.7s ease-in-out;
 }
+
+.back-image{
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+}
+
+.altyazi{
+  width: max-content;
+}

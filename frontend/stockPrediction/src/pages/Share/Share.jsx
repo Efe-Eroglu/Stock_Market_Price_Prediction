@@ -3,11 +3,14 @@ import hisse_data from "../../data/hisse_data";
 import { Row, Col } from "antd";
 import { Card } from "antd";
 import { Link } from "react-router-dom";
+import { FaRegStar } from "react-icons/fa";
 
 const Share = () => {
+  const user = localStorage.getItem("user");
+
   return (
     <div className="hisse-ekrani w-screen ">
-      <div className="kartlar pb-14">
+      <div className="kartlar pb-20">
         <Row gutter={16}>
           {hisse_data.map((hisse, index) => (
             <Col span={8} key={index}>
@@ -31,11 +34,26 @@ const Share = () => {
                   </Link>
                 }
               >
-                <div className="altyazi text-xl">{hisse.name}</div>
+                <div className="flex justify-between">
+                  <div className="altyazi text-xl ">{hisse.name}</div>
+                  {user && (
+                    <div>
+                      <FaRegStar className="star text-3xl cursor-pointer" />
+                    </div>
+                  )}
+                </div>
               </Card>
             </Col>
           ))}
         </Row>
+      </div>
+
+      <div className="back-image">
+        <img src="/teamImages/banner-bg.png" alt="" />
+        <img src="/teamImages/banner-bg2.png" alt="" />
+        <img src="/teamImages/banner-bg.png" alt="" />
+        <img src="/teamImages/banner-bg2.png" alt="" />
+        <img src="/teamImages/banner-bg-3.png" alt="" />
       </div>
     </div>
   );
