@@ -7,7 +7,7 @@ const randomf_schema = mongoose.Schema(
         n_estimator:{type:[String], required:false},
         max_depth:{type:[String], required:false},
         min_samples_leaf:{type:[String], required:false},
-        dogruluk_degeri:{type:[String], required:false}
+        dogruluk:{type:[String], required:false}
     },
     {
         timestamps:true
