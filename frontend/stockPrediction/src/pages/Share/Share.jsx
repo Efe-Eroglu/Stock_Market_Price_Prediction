@@ -6,8 +6,7 @@ import { Link } from "react-router-dom";
 import { FaRegStar } from "react-icons/fa";
 
 const Share = () => {
-  const user = localStorage.getItem("user");
-
+  
   return (
     <div className="hisse-ekrani w-screen ">
       <div className="kartlar pb-20">
@@ -36,11 +35,6 @@ const Share = () => {
               >
                 <div className="flex justify-between">
                   <div className="altyazi text-xl ">{hisse.name}</div>
-                  {user && (
-                    <div>
-                      <FaRegStar className="star text-3xl cursor-pointer" />
-                    </div>
-                  )}
                 </div>
               </Card>
             </Col>

@@ -37,9 +37,7 @@ const Header = () => {
          
           {user && (
             <div className="flex items-center">
-              <a href="/favourite-list">
-                <span className="linkler">Favoriler</span>
-              </a>
+              
               <a onClick={()=>{
                 if(window.confirm("Çıkış yapmak istediğinize emin misiniz?")){
                   localStorage.removeItem("user")

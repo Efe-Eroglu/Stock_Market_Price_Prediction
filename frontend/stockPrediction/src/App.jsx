@@ -4,12 +4,9 @@ import Share from "./pages/Share/Share";
 import AnaSayfa from "./pages/MainPage/AnaSayfa";
 import Teams from "./pages/Team/Teams";
 import Model from "./pages/AI-Models/Model";
-import Favourite from "./pages/Favourite/Favourite";
 import Login from "./pages/Login/Login";
 import Header from "./components/header/Header";
 import Error from "./pages/Error/Error";
-import { useEffect, useState } from "react";
-import axios from "axios"
 import AKBNK from "./pages/Tablolar/AKBNK";
 import ALARK from "./pages/Tablolar/ALARK";
 import BIMAS from "./pages/Tablolar/BIMAS";
@@ -18,17 +15,6 @@ import ASTOR from "./pages/Tablolar/ASTOR";
 import ARCLK from "./pages/Tablolar/ARCLK";
 
 function App() {
-  
-  const [hisseler,setHisseler] = useState([])
-
-  
-
-  useEffect(()=>{
-    axios
-    .get("http://localhost:5000/api/ann")
-    .then(response => setHisseler(response.data))
-    .catch(error => console.log({error}))
-  },[])
 
   const isLoginPage = window.location.pathname === "/login";
   return (
@@ -43,8 +29,7 @@ function App() {
           <Route path="/team" element={<Teams />} />
           <Route path="/ai-models" element={<Model />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/favourite-list" element={<Favourite />} />
-          <Route path="/share/AKBNK" element={<AKBNK />} />
+          <Route path="/share/AKBNK" element={<AKBNK/>}/>
           <Route path="/share/ALARK" element={<ALARK />} />
           <Route path="/share/ARCLK" element={<ARCLK />} />
           <Route path="/share/ASELS" element={<ASELS />} />
@@ -60,8 +45,3 @@ function App() {
 }
 
 export default App;
-
-
-// hisseler.forEach(nesne => {
-//   console.log("Hisse Adı:", nesne.hisseAd);
-// });
