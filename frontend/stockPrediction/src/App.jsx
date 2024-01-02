@@ -7,12 +7,7 @@ import Model from "./pages/AI-Models/Model";
 import Login from "./pages/Login/Login";
 import Header from "./components/header/Header";
 import Error from "./pages/Error/Error";
-import AKBNK from "./pages/Tablolar/AKBNK";
-import ALARK from "./pages/Tablolar/ALARK";
-import BIMAS from "./pages/Tablolar/BIMAS";
-import ASELS from "./pages/Tablolar/ASELS";
-import ASTOR from "./pages/Tablolar/ASTOR";
-import ARCLK from "./pages/Tablolar/ARCLK";
+import Tablolar from "./pages/Tablolar/Tablolar";
 
 function App() {
 
@@ -29,12 +24,7 @@ function App() {
           <Route path="/team" element={<Teams />} />
           <Route path="/ai-models" element={<Model />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/share/AKBNK" element={<AKBNK/>}/>
-          <Route path="/share/ALARK" element={<ALARK />} />
-          <Route path="/share/ARCLK" element={<ARCLK />} />
-          <Route path="/share/ASELS" element={<ASELS />} />
-          <Route path="/share/ASTOR" element={<ASTOR />} />
-          <Route path="/share/BIMAS" element={<BIMAS />} />
+          <Route path="/share/:hisseAd" element={<Tablolar />} />
           <Route path="*" element={<Error />} />
         </Routes>
       </Router>

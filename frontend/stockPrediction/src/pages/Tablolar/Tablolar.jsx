@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import "./tablolar.css";
 import {
   Line,
@@ -13,16 +14,16 @@ import {
 import { Chart as ChartJS } from "chart.js/auto";
 import axios from "axios";
 
-const AKBNK = () => {
+const Tablolar = () => {
+  const { hisseAd } = useParams();
 
   const user = localStorage.getItem("user");
 
   useEffect(() => {
-    if(!user){
-      window.location.href="/login";
+    if (!user) {
+      window.location.href = "/login";
     }
   }, []);
-
 
   const [hisseler, setHisseler] = useState([]);
   const [dtree_hisseler, dtree_setHisseler] = useState([]);
@@ -31,7 +32,9 @@ const AKBNK = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("http://localhost:5000/api/ann/AKBNK");
+        const response = await axios.get(
+          `http://localhost:5000/api/ann/${hisseAd}`
+        );
         setHisseler(response.data);
       } catch (error) {
         console.log({ error });
@@ -44,7 +47,7 @@ const AKBNK = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/decision-tree/AKBNK"
+            `http://localhost:5000/api/decision-tree/${hisseAd}`
         );
         dtree_setHisseler(response.data);
       } catch (error) {
@@ -58,7 +61,7 @@ const AKBNK = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          "http://localhost:5000/api/random-forest/AKBNK"
+            `http://localhost:5000/api/random-forest/${hisseAd}`
         );
         rforest_setHisseler(response.data);
       } catch (error) {
@@ -67,6 +70,9 @@ const AKBNK = () => {
     };
     fetchData();
   }, []);
+
+  console.log(rforestHisseler);
+
 
   const katman_data = {
     labels: [
@@ -123,11 +129,11 @@ const AKBNK = () => {
   };
   const max_depth_data = {
     labels: [
-      rforestHisseler[0]?.max_depth?.[0],
-      rforestHisseler[0]?.max_depth?.[1],
-      rforestHisseler[0]?.max_depth?.[2],
-      rforestHisseler[0]?.max_depth?.[3],
-      rforestHisseler[0]?.max_depth?.[4],
+      rforestHisseler[1]?.max_depth?.[0],
+      rforestHisseler[1]?.max_depth?.[1],
+      rforestHisseler[1]?.max_depth?.[2],
+      rforestHisseler[1]?.max_depth?.[3],
+      rforestHisseler[1]?.max_depth?.[4],
     ],
     datasets: [
       {
@@ -137,16 +143,16 @@ const AKBNK = () => {
         pointHoverBorderColor: "rgb(75, 192, 192)",
         label: "Max Depth",
         data: [
-          rforestHisseler[0]?.dogruluk?.[0],
-          rforestHisseler[0]?.dogruluk?.[1],
-          rforestHisseler[0]?.dogruluk?.[2],
-          rforestHisseler[0]?.dogruluk?.[3],
-          rforestHisseler[0]?.dogruluk?.[4],
+          rforestHisseler[1]?.dogruluk?.[0],
+          rforestHisseler[1]?.dogruluk?.[1],
+          rforestHisseler[1]?.dogruluk?.[2],
+          rforestHisseler[1]?.dogruluk?.[3],
+          rforestHisseler[1]?.dogruluk?.[4],
         ],
         fill: true,
-        backgroundColor: "rgba(75,192, 192,0.7)",
+        backgroundColor: "rgba(75,192, 192,0.5)",
         borderColor: "rgb(255, 255, 255)",
-        tension: 0.2,
+        tension: 0,
       },
     ],
   };
@@ -192,7 +198,7 @@ const AKBNK = () => {
         fill: true,
         backgroundColor: "rgba(75,192, 192,0.7)",
         borderColor: "rgb(255, 255, 255)",
-        tension: 0.2,
+        tension: 0.1,
       },
     ],
   };
@@ -218,7 +224,7 @@ const AKBNK = () => {
         fill: true,
         backgroundColor: "rgba(75,192, 192,0.6)",
         borderColor: "rgb(255, 255, 255)",
-        tension: 0.3,
+        tension: 0.1,
       },
     ],
   };
@@ -251,21 +257,21 @@ const AKBNK = () => {
 
   const n_estimators = {
     labels: [
-      rforestHisseler[1]?.n_estimator?.[0],
-      rforestHisseler[1]?.n_estimator?.[1],
-      rforestHisseler[1]?.n_estimator?.[2],
-      rforestHisseler[1]?.n_estimator?.[3],
-      rforestHisseler[1]?.n_estimator?.[4],
+      rforestHisseler[0]?.n_estimator?.[0],
+      rforestHisseler[0]?.n_estimator?.[1],
+      rforestHisseler[0]?.n_estimator?.[2],
+      rforestHisseler[0]?.n_estimator?.[3],
+      rforestHisseler[0]?.n_estimator?.[4],
     ],
     datasets: [
       {
         label: "N-Estimators",
         data: [
-          rforestHisseler[1]?.dogruluk?.[0],
-          rforestHisseler[1]?.dogruluk?.[1],
-          rforestHisseler[1]?.dogruluk?.[2],
-          rforestHisseler[1]?.dogruluk?.[3],
-          rforestHisseler[1]?.dogruluk?.[4],
+          rforestHisseler[0]?.dogruluk?.[0],
+          rforestHisseler[0]?.dogruluk?.[1],
+          rforestHisseler[0]?.dogruluk?.[2],
+          rforestHisseler[0]?.dogruluk?.[3],
+          rforestHisseler[0]?.dogruluk?.[4],
         ],
         fill: true,
         backgroundColor: "rgba(75,192, 192,0.5)",
@@ -306,7 +312,7 @@ const AKBNK = () => {
       x: {
         title: {
           display: true,
-          text: 'Hiper Parametre',
+          text: "Hiper Parametre",
         },
         ticks: {
           stepSize: 1, // Aksın adım büyüklüğü
@@ -315,44 +321,40 @@ const AKBNK = () => {
       y: {
         title: {
           display: true,
-          text: 'Doğruluk Değeri',
+          text: "Doğruluk Değeri",
         },
       },
     },
   };
 
-  
-  
-
   return (
     <div className="tablolar w-full p-10">
-
       {user && (
         <div className="konteyner">
-        <h1 className="text-center text-3xl p-10">Ann Modeli</h1>
-        <div className="ann flex justify-end flex-col w-1/2 gap-20 ml-10">
-          <Bar data={katman_data} options={options} />
-          <Line data={epoch_data} options={options} />
-          <Radar data={batch_data} />
-        </div>
+          <h1 className="text-center text-3xl p-10">Ann Modeli</h1>
+          <div className="ann flex justify-end flex-col w-1/2 gap-20 ml-10">
+            <Bar data={katman_data} options={options} />
+            <Line data={epoch_data} options={options} />
+            <Radar data={batch_data} />
+          </div>
 
-        <h1 className="text-center text-3xl p-10 pt-32">Decision Tree</h1>
-        <div className="dtree flex justify-center flex-col w-1/2 gap-20 ml-10">
-          <Bar data={depth_data} options={options} />
-          <Line data={leaf_data} options={options} />
-          <Bar data={split_data} options={options} />
-        </div>
+          <h1 className="text-center text-3xl p-10 pt-32">Decision Tree</h1>
+          <div className="dtree flex justify-center flex-col w-1/2 gap-20 ml-10">
+            <Bar data={depth_data} options={options} />
+            <Line data={leaf_data} options={options} />
+            <Bar data={split_data} options={options} />
+          </div>
 
-        <h1 className="text-center text-3xl p-10">Random Forest</h1>
-        <div className="dtree flex justify-center flex-col w-1/2 gap-20 ml-10">
-          <Radar data={max_depth_data}/>
-          <Bar data={min_leaf} options={options} />
-          <Line data={n_estimators} options={options} />
+          <h1 className="text-center text-3xl p-10">Random Forest</h1>
+          <div className="dtree flex justify-center flex-col w-1/2 gap-20 ml-10">
+            <Radar data={max_depth_data} />
+            <Bar data={min_leaf} options={options} />
+            <Line data={n_estimators} options={options} />
+          </div>
         </div>
-      </div>
       )}
     </div>
   );
 };
 
-export default AKBNK;
+export default Tablolar;
