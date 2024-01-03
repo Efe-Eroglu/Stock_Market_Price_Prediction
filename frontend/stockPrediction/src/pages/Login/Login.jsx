@@ -1,9 +1,8 @@
 import { useEffect, useState } from "react";
 import "./login.css";
-import {message} from "antd";
+import { message } from "antd";
 
 const Login = () => {
-
   const [signState, setSignState] = useState(false);
 
   const [registerFormData, setRegisterFormData] = useState({
@@ -30,23 +29,21 @@ const Login = () => {
         headers: {
           "content-Type": "application/json",
         },
-        body:JSON.stringify(registerFormData),
+        body: JSON.stringify(registerFormData),
       });
 
-      if (response.ok){
+      if (response.ok) {
         const data = await response.json();
-        const {password, ...rest} = data; 
-        localStorage.setItem("user",JSON.stringify(rest));
-        message.success("Kayıt İşlemi Başarılı")
-        window.location.href = '/login';
-        
+        const { password, ...rest } = data;
+        localStorage.setItem("user", JSON.stringify(rest));
+        message.success("Kayıt İşlemi Başarılı");
+        window.location.href = "/login";
+      } else {
+        message.error("Kayıt işlemi başarısız");
       }
-      else{
-        message.error("Kayıt işlemi başarısız")
-      }
-
     } catch (error) {
-      console.log("Giriş hatası:" , error);
+      message.error("Kayıt işlemi başarısız");
+      console.log("Giriş hatası:", error);
     }
   };
 
@@ -59,7 +56,6 @@ const Login = () => {
   };
 
   const handleLogin = async (e) => {
-
     e.preventDefault();
     try {
       const response = await fetch("http://localhost:5000/api/users/login", {
@@ -67,21 +63,20 @@ const Login = () => {
         headers: {
           "content-Type": "application/json",
         },
-        body:JSON.stringify(loginFormData),
+        body: JSON.stringify(loginFormData),
       });
 
-      if (response.ok){
+      if (response.ok) {
         const data = await response.json();
-        localStorage.setItem("user",JSON.stringify(data));
-        message.success("Giriş Başarılı")
-        window.location.href = '/home';
+        localStorage.setItem("user", JSON.stringify(data));
+        window.location.href = "/home";
+        message.success("Giriş Başarılı");
+      } else {
+        message.error("Giriş başarısız");
       }
-      else{
-        message.error("Giriş başarısız")
-      }
-
     } catch (error) {
-      console.log("Giriş hatası:" , error);
+      message.error("Giriş başarısız");
+      console.log("Giriş hatası:", error);
     }
   };
 
@@ -90,24 +85,31 @@ const Login = () => {
     setLoginFormData({ ...loginFormData, [name]: value });
   };
 
-
   return (
-
     <div className="login-page-content ">
       <div className={`container ${signState ? "sign-up-mode" : ""}`}>
         <div className="forms-container">
           <div className="signin-signup">
-           
-           {/* User Login İşlemi*/}
+            {/* User Login İşlemi*/}
             <form className="sign-in-form" onSubmit={handleLogin}>
               <h2 className="title mb-6">Giriş Yap</h2>
               <div className="input-field">
                 <i className="bx bxs-user"></i>
-                <input type="email" placeholder="Kullanıcı Email" name="email" onChange={handleLoginInputChange}/>
+                <input
+                  type="email"
+                  placeholder="Kullanıcı Email"
+                  name="email"
+                  onChange={handleLoginInputChange}
+                />
               </div>
               <div className="input-field">
                 <i className="bx bxs-lock-alt"></i>
-                <input type="password" placeholder="Parola" name="password" onChange={handleLoginInputChange}/>
+                <input
+                  type="password"
+                  placeholder="Parola"
+                  name="password"
+                  onChange={handleLoginInputChange}
+                />
               </div>
               <input
                 type="submit"
@@ -120,8 +122,7 @@ const Login = () => {
               </p>
             </form>
 
-
-           {/* User Register İşlemi*/}
+            {/* User Register İşlemi*/}
             <form className="sign-up-form" onSubmit={handleRegister}>
               <h2 className="title">Kayıt Ol</h2>
               <div className="input-field">
@@ -161,9 +162,6 @@ const Login = () => {
                 olabilirsin
               </p>
             </form>
-
-
-
           </div>
         </div>
         <div className="panels-container">
@@ -195,7 +193,12 @@ const Login = () => {
                 Giriş Yap
               </button>
             </div>
-            <img src="/loginImages/right.png" className="image" id="giris-resim" alt="" />
+            <img
+              src="/loginImages/right.png"
+              className="image"
+              id="giris-resim"
+              alt=""
+            />
           </div>
         </div>
       </div>

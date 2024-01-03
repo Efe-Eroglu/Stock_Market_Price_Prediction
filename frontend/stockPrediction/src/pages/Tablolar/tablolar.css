@@ -1,0 +1,11 @@
+.konteyner h1 {
+    padding: 7rem;
+    font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+      "Lucida Sans", Arial, sans-serif;
+  
+    background-image: linear-gradient(45deg, #110c4f, #110b57, #1f186e);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-fill-color: transparent;
+}

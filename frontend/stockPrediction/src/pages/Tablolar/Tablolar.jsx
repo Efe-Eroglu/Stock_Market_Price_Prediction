@@ -47,7 +47,7 @@ const Tablolar = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-            `http://localhost:5000/api/decision-tree/${hisseAd}`
+          `http://localhost:5000/api/decision-tree/${hisseAd}`
         );
         dtree_setHisseler(response.data);
       } catch (error) {
@@ -61,7 +61,7 @@ const Tablolar = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-            `http://localhost:5000/api/random-forest/${hisseAd}`
+          `http://localhost:5000/api/random-forest/${hisseAd}`
         );
         rforest_setHisseler(response.data);
       } catch (error) {
@@ -70,9 +70,6 @@ const Tablolar = () => {
     };
     fetchData();
   }, []);
-
-  console.log(rforestHisseler);
-
 
   const katman_data = {
     labels: [
@@ -127,6 +124,7 @@ const Tablolar = () => {
       },
     ],
   };
+
   const max_depth_data = {
     labels: [
       rforestHisseler[1]?.max_depth?.[0],
@@ -149,13 +147,12 @@ const Tablolar = () => {
           rforestHisseler[1]?.dogruluk?.[3],
           rforestHisseler[1]?.dogruluk?.[4],
         ],
-        fill: true,
         backgroundColor: "rgba(75,192, 192,0.5)",
         borderColor: "rgb(255, 255, 255)",
-        tension: 0,
       },
     ],
   };
+
   const epoch_data = {
     labels: [
       hisseler[1]?.epochs?.[0],
@@ -328,25 +325,25 @@ const Tablolar = () => {
   };
 
   return (
-    <div className="tablolar w-full p-10">
+    <div className="tablolar w-full">
       {user && (
-        <div className="konteyner">
-          <h1 className="text-center text-3xl p-10">Ann Modeli</h1>
-          <div className="ann flex justify-end flex-col w-1/2 gap-20 ml-10">
+        <div className="konteyner flex flex-col items-center ">
+          <h1 className="baslik text-center text-5xl p-10 mr-20"><strong>Artificial Neural Network</strong></h1>
+          <div className="model flex flex-col items-center w-1/2 gap-20 mt-10 mr-28">
             <Bar data={katman_data} options={options} />
             <Line data={epoch_data} options={options} />
             <Radar data={batch_data} />
           </div>
 
-          <h1 className="text-center text-3xl p-10 pt-32">Decision Tree</h1>
-          <div className="dtree flex justify-center flex-col w-1/2 gap-20 ml-10">
+          <h1 className="baslik text-center text-5xl p-10 pt-32 mr-20"><strong>Decision Tree</strong></h1>
+          <div className="model flex flex-col items-center w-1/2 gap-20 mt-10 mr-28">
             <Bar data={depth_data} options={options} />
             <Line data={leaf_data} options={options} />
             <Bar data={split_data} options={options} />
           </div>
 
-          <h1 className="text-center text-3xl p-10">Random Forest</h1>
-          <div className="dtree flex justify-center flex-col w-1/2 gap-20 ml-10">
+          <h1 className="baslik text-center text-5xl p-10 mr-20"><strong>Random Forest</strong></h1>
+          <div className="model flex flex-col items-center w-1/2 gap-20 mt-10 mr-28 mb-20">
             <Radar data={max_depth_data} />
             <Bar data={min_leaf} options={options} />
             <Line data={n_estimators} options={options} />
