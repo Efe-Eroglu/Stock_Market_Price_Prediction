@@ -26,13 +26,13 @@ const Under = () => {
           <div className="right-under">
             <div className="baslik"><IoShareSocialOutline className="mr-1 mt-1 text-3xl"/><h1>Bize Katıl</h1></div>
             <div className="sosyal mt-2">
-              <a href="#" target="blank"><CiFacebook className="text-5xl mr-3"/></a>
-              <a href="#" target="blank"><CiTwitter className="text-5xl mr-3"/></a>
-              <a href="#" target="blank"><FaInstagram className="text-5xl mr-3"/></a>
-              <a href="#" target="blank"><FaThreads className="text-5xl"/></a>
+              <a href="https://www.facebook.com/profile.php?id=61554837647979&locale=tr_TR" target="blank"><CiFacebook className="text-5xl mr-3"/></a>
+              <a href="https://twitter.com/StockPredic0" target="blank"><CiTwitter className="text-5xl mr-3"/></a>
+              <a href="https://www.instagram.com/stockprediction001/" target="blank"><FaInstagram className="text-5xl mr-3"/></a>
+              <a href="https://www.threads.net/@stockprediction001" target="blank"><FaThreads className="text-5xl"/></a>
             </div>
           </div>
-        </div>
+        </div>  
      
     </>
   );
